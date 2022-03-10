@@ -20,5 +20,18 @@ const hasil = (x) => {
     console.log(x)
 }
 
+const hitung = (num1, num2, kali, pangkatDua) => {
+    kali(num1, num2, pangkatDua)
+}
+
+const kali = (a, b, pangkatDua) => {
+    pangkatDua(a * b)
+}
+
+const pangkatDua = (x) => {  
+    console.log(x ** 2)
+}
+
 getNilai(tampilkanNilai)
-jumlah(6, 9, proses, hasil)
+jumlah(3, 2, proses, hasil)
+hitung(4, 7, kali, pangkatDua)

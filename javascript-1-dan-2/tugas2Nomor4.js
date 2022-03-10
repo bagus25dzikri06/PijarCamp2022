@@ -19,7 +19,7 @@ let dataBaru = {
     ...data,
     name: 'Bagus Dzikri Hidayat',
     email: 'bagusdzikri@gmail.com',
-    hobby: 'Reading, listening to the music, browsing'
+    hobby: ['Reading', 'listening to the music', 'browsing']
 }
 
 console.log(dataBaru)

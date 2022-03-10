@@ -2,7 +2,7 @@ const seleksiNilai = (nilaiAwal, nilaiAkhir, dataArr, arrCompare, arrSort) => {
     if (nilaiAwal < nilaiAkhir) {
         if (dataArr.length > 5) {
             let newArr = []
-            for (let i = nilaiAwal; i < nilaiAkhir; i++) {
+            for (let i = nilaiAwal; i <= nilaiAkhir; i++) {
                 newArr.push(i)
             }
             arrCompare(dataArr, newArr, arrSort)

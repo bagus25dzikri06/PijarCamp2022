@@ -1,7 +1,7 @@
 const printSegitiga = (panjangSisi) => {
     if (typeof panjangSisi === 'number') {
         let hasil = ''
-        for (let i = panjangSisi; i >= 1; i--) {
+        for (let i = 1; i <= panjangSisi; i++) {
             for (let j = 1; j <= i; j++) {
                 hasil += j + ' '
             }

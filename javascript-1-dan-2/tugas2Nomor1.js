@@ -1,6 +1,6 @@
 const biodata = {
     name: 'Bagus Dzikri Hidayat',
-    age: 18,
+    age: 26,
     hobbies: ['reading', 'listening to the music', 'browsing'],
     isMarried: false,
     schoolList: [
@@ -60,4 +60,11 @@ const biodata = {
         }
     ],
     interestedInCoding: true
+}
+
+//console.log(biodata.skills[2].skillName)
+//console.log(biodata.hobbies[2])
+
+module.exports = {
+    biodata
 }
