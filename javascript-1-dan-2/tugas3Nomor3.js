@@ -16,15 +16,7 @@ const seleksiNilai = (nilaiAwal, nilaiAkhir, dataArr, arrCompare, arrSort) => {
 
 const arrCompare = (arr1, arr2, arrSort) => {
     if (arr2.some(v => arr1.includes(v)) === true) {
-        let resultArr = []
-        for (let i = 0; i < arr1.length; i++) {
-            if (arr2.includes(arr1[i]) === true) {
-                resultArr.push(arr1[i])
-            } else {
-                continue
-            }
-        }
-        arrSort(resultArr)
+        arrSort(arr2.filter(v => arr1.includes(v)))
     } else {
         console.log('Nilai tidak ditemukan')
     }

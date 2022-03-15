@@ -1,17 +1,17 @@
 const searchName = (substringNama, jumlahNama, arrayNama, limitedArray, capitalizedArr) => {
-    let dataNama = ''
+    let dataNama = []
     let arrayNamainLowercase = arrayNama.map((e) => {
         return e.toLowerCase()
     })
     for (let i = 0; i < arrayNamainLowercase.length; i++) {
         if ( arrayNamainLowercase[i].includes(substringNama) === true ) {
-            dataNama += arrayNamainLowercase[i] + ', '
+            dataNama.push(arrayNamainLowercase[i])
         } else {
             continue
         }
     }
 
-    limitedArray(dataNama.split(', '), jumlahNama, capitalizedArr)
+    limitedArray(dataNama, jumlahNama, capitalizedArr)
 }
 
 const limitedArray = (arr, num, capitalizedArr) => {
