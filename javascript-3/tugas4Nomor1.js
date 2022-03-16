@@ -1,4 +1,4 @@
-const cekHariKerja = (day) => {
+const cekHariKerja = (day, callback) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             const dataDay = [`Senin`, `Selasa`, `Rabu`, `Kamis`, `Jum'at`]
@@ -7,7 +7,7 @@ const cekHariKerja = (day) => {
             })
 
             if (cek) {
-                resolve(cek)
+                resolve(callback(cek))
             } else {
                 reject(new Error('Hari ini bukan hari kerja'))
 
@@ -16,28 +16,28 @@ const cekHariKerja = (day) => {
     })
 }
 
-// How to show the result of the Promise with then ... catch ...
-const dinoKerjo = async (hari) => {
-    await cekHariKerja(hari).then((res) => {
-        console.log(res)
-    }).catch((err) => {
+const dayCallback = (res) => {
+    console.log(res)
+}
+
+// How to show the result of the Promise with catch ...
+const dinoKerjo = async (hari, cb) => {
+    await cekHariKerja(hari, cb).catch((err) => {
         console.log(err.message)
     })
 }
 
-dinoKerjo('Senin')
-dinoKerjo('Sabtu')
+dinoKerjo('Senin', dayCallback)
+dinoKerjo('Sabtu', dayCallback)
 
 // How to show the result of the Promise with try ... catch ...
-const hariKerja = async (hari) => {
+const hariKerja = async (hari, cb) => {
     try {
-        await cekHariKerja(hari).then((res) => {
-            console.log(res)
-        })
+        await cekHariKerja(hari, cb)
     } catch (err) {
         console.log(err.message)
     }
 }
 
-hariKerja('Senin')
-hariKerja('Sabtu')
+hariKerja('Senin', dayCallback)
+hariKerja('Sabtu', dayCallback)
