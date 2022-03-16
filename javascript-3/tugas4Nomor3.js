@@ -1,3 +1,4 @@
+//1. Cek bilangan kelipatan 3
 const cekKelipatan3 = (num) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -13,6 +14,18 @@ const cekKelipatan3 = (num) => {
     })
 }
 
+const angkaKel3 = async (angka) => {
+    await cekKelipatan3(angka).then((res) => {
+        console.log(res)
+    }).catch((err) => {
+        console.log(err.message)
+    })
+}
+
+angkaKel3(24)
+angkaKel3(82)
+
+//2. Jumlah elemen suatu array
 const cekTotalArrElements = (arr, callback) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -36,14 +49,6 @@ const arrJumlah = (res) => {
     }))
 }
 
-const angkaKel3 = async (angka) => {
-    await cekKelipatan3(angka).then((res) => {
-        console.log(res)
-    }).catch((err) => {
-        console.log(err.message)
-    })
-}
-
 const totalElArr = async (arr, cb) => {
     try {
         await cekTotalArrElements(arr, cb)
@@ -51,9 +56,6 @@ const totalElArr = async (arr, cb) => {
         console.log(err.message)
     }
 }
-
-angkaKel3(24)
-angkaKel3(82)
 
 totalElArr([8, 17, 7, 22, 34], arrJumlah)
 totalElArr([13, 'dua', 18, 5, 'lima puluh'], arrJumlah)
