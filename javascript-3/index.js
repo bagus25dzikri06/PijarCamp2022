@@ -5,7 +5,8 @@ const getUsers = async (url) => {
         .then(result => result.json())
         .then(result => {
             result.map(user => {
-                console.log('User ' + user.id + ' is ' + user.name)
+                //console.log('User ' + user.id + ' is ' + user.name)
+                console.log(user)
             })
         })
 }
