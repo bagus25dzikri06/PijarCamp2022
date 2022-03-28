@@ -1,10 +1,14 @@
 //declare express
 const express = require('express')
+const helmet = require('helmet')
+const xss = require('xss-clean')
 const bodyParser = require('body-parser')
 const app = express()
-const { UsersController } = require('./db')
+const { UsersController } = require('./user.controller')
 const port = 3000
 
+app.use(helmet())
+app.use(xss())
 app.use(bodyParser.json())
 app.use(
   bodyParser.urlencoded({
