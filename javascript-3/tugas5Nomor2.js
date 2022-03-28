@@ -1,5 +1,5 @@
-const pijarFood = (harga, voucher, jarak, pajak, cb1, cb2) => {
-    let diskon, 
+const pijarFood = (harga, voucher, jarak, pajak, cb1, cb2, cb3) => {
+    let diskon = 0, 
     diskonPijarFood5 = harga * 0.5, 
     diskonDitraktirPijar = harga * 0.6,
     ongkosKirim = 5000, 
@@ -8,45 +8,51 @@ const pijarFood = (harga, voucher, jarak, pajak, cb1, cb2) => {
     jarakTempuh = jarak <= 2,
     totalPajak = pajak === true
 
-    console.log(`Harga: ${harga}`)
-    if (voucher === 'PIJARFOOD5' && voucher.toUpperCase() === 'PIJARFOOD5') {
+    console.log(`Harga      : ${harga}`)
+    if (voucher.toUpperCase() === 'PIJARFOOD5') {
         if ((harga >= 50000) && (diskonPijarFood5 <= 50000)) {
-            diskon = harga - diskonPijarFood5
+            diskon = diskonPijarFood5
         } else {
-            diskon = harga 
+            diskon
         }
-    } else if (voucher === 'DITRAKTIRPIJAR' && voucher.toUpperCase() === 'DITRAKTIRPIJAR') {
+    } else if (voucher.toUpperCase() === 'DITRAKTIRPIJAR') {
         if ((harga >= 25000) && (diskonDitraktirPijar <= 30000)) {
-            diskon = harga - diskonDitraktirPijar
+            diskon = diskonDitraktirPijar
         } else {
-            diskon = harga 
+            diskon
         }
     } else {
-        diskon = harga
+        diskon
     }
     console.log(`Diskon     : ${diskon}`)
 
     console.log(jarakTempuh ? `Biaya Antar: ${ongkosKirim}` : `Biaya Antar: ${totalOngkir}`)
     console.log(totalPajak ? `Pajak      : ${foodTax}` : `Pajak     : ${0}`)
-    console.log('================= +')
+    console.log('===================')
 
     if (jarakTempuh && totalPajak) {
-        cb2(diskon, ongkosKirim, foodTax)
+        console.log(`Sub Total  : ${cb3(harga, diskon, ongkosKirim, foodTax, cb1, cb2)}`)
     } else if (jarakTempuh && !totalPajak) {
-        cb1(diskon, ongkosKirim)
+        console.log(`Sub Total  : ${cb1(harga, diskon, ongkosKirim, cb2)}`)
     } else if (!jarakTempuh && totalPajak) {
-        cb2(diskon, totalOngkir, foodTax)
+        console.log(`Sub Total  : ${cb3(harga, diskon, totalOngkir, foodTax, cb1, cb2)}`)
     } else {
-        cb1(diskon, totalOngkir)
+        console.log(`Sub Total  : ${cb1(harga, diskon, totalOngkir, cb2)}`)
     }
 }
 
-const jumlahDua = (num1, num2) => {
-    console.log(`Sub Total  : ${num1 + num2}`)
+const totalEmpat = (num1, num2, num3, num4, totalTiga, kurang) => {
+    return num4 + totalTiga(num1, num2, num3, kurang)
 }
 
-const jumlahTiga = (num1, num2, num3) => {
-    console.log(`Sub Total  : ${num1 + num2 + num3}`)
+const totalTiga = (num1, num2, num3, kurang) => {
+    return num3 + kurang(num1, num2)
 }
 
-pijarFood(75000, 'PIJARFOOD5', 5, true, jumlahDua, jumlahTiga)
+const kurang = (num1, num2) => {
+    return num1 - num2
+}
+
+pijarFood(75000, 'PIJARFOOD5', 5, true, totalTiga, kurang, totalEmpat)
+pijarFood(30000, 'PIJARFOOD5', 5, true, totalTiga, kurang, totalEmpat)
+pijarFood(45000, 'DITRAKTIRPIJAR', 12, true, totalTiga, kurang, totalEmpat)

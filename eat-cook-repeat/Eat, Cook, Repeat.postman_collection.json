@@ -1,0 +1,3101 @@
+{
+	"info": {
+		"_postman_id": "755a8bb6-e790-44fb-8127-585e714d2539",
+		"name": "Eat, Cook, Repeat",
+		"description": "This API collection contains some operations from a cooking recipe website called Eat, Cook, Repeat ([https://www.figma.com/file/SUbBTYCq1e4ngRt20lSdqr/Food-Recipe?node-id=47:127](https://www.figma.com/file/SUbBTYCq1e4ngRt20lSdqr/Food-Recipe?node-id=47:127))\n\n*   User: Adding/registering the Eat, Cook, Repeat user\n*   Recipe:\n    \n\n\\- Adding and updating the recipe  \n\\- Latest recipes from Eat, Cook, Repeat\n\n*   Recipe Comment: Adding, updating and deleting the comment of the recipe",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Showing list of the Eat, Cook, Repeat users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/users",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Showing list of the Eat, Cook, Repeat users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/users",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "583"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"247-1rFoeU9IdXju8XssR2+LOl0d8hM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 13:17:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"David Susanto\",\n        \"email\": \"david@abc.com\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Laras Sukmawati\",\n        \"email\": \"laras@abc.com\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Dadang Suryawan\",\n        \"email\": \"dangSur@abc.com\"\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Albert Dominggus\",\n        \"email\": \"albert@abc.com\"\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Syahrul Wibowo\",\n        \"email\": \"bowo@abc.com\"\n    },\n    {\n        \"id\": 6,\n        \"name\": \"Danang Ahmadi\",\n        \"email\": \"danang@abc.com\"\n    },\n    {\n        \"id\": 7,\n        \"name\": \"Wahyu Syahputra\",\n        \"email\": \"wahyu_s@abc.com\"\n    },\n    {\n        \"id\": 8,\n        \"name\": \"Angga Sudarwanto\",\n        \"email\": \"angga_s@abc.com\"\n    },\n    {\n        \"id\": 9,\n        \"name\": \"Daud Sulaiman\",\n        \"email\": \"daud@abc.com\"\n    },\n    {\n        \"id\": 10,\n        \"name\": \"Jajang Sukmana\",\n        \"email\": \"jajang@abc.com\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Registering the new user of Eat, Cook, Repeat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Supriyanto\",\r\n    \"email\": \"supriyanto@abc.com\",\r\n    \"phone_number\": \"089843206233\",\r\n    \"password\": \"P@ssw0rd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/users/register",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "All data are empty",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"\",\r\n    \"email\": \"\",\r\n    \"phone_number\": \"\",\r\n    \"password\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/users/register",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"35-8ryUmH8bIgkQr1HPesnBnN2RuaY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 13:27:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failed\",\n    \"message\": \"All must be required.\"\n}"
+						},
+						{
+							"name": "Email, phone number and password are empty",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Supriyanto\",\r\n    \"email\": \"\",\r\n    \"phone_number\": \"\",\r\n    \"password\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/users/register",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "78"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4e-Aw0afJh/36c1rGFG7MxORooqe+w\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 13:30:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failed\",\n    \"message\": \"Email, phone number and password are required.\"\n}"
+						},
+						{
+							"name": "Name, phone number and password are empty",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"\",\r\n    \"email\": \"supriyanto@abc.com\",\r\n    \"phone_number\": \"\",\r\n    \"password\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/users/register",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "70"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"46-8P+HSsARfTBhgcBEgXQLXXR9E9M\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 13:40:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failed\",\n    \"message\": \"Name, email and password are required.\"\n}"
+						},
+						{
+							"name": "Name, email and password are empty",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"\",\r\n    \"email\": \"\",\r\n    \"phone_number\": \"089843206233\",\r\n    \"password\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/users/register",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "70"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"46-8P+HSsARfTBhgcBEgXQLXXR9E9M\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 13:41:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failed\",\n    \"message\": \"Name, email and password are required.\"\n}"
+						},
+						{
+							"name": "Name, email and phone number are empty",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"\",\r\n    \"email\": \"\",\r\n    \"phone_number\": \"\",\r\n    \"password\": \"P@ssw0rd\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/users/register",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "74"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4a-7yNK9mBRHEKC+Q1LP+m5MAiI6cA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 13:43:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failed\",\n    \"message\": \"Name, email and phone number are required.\"\n}"
+						},
+						{
+							"name": "Phone number and password are empty",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Supriyanto\",\r\n    \"email\": \"supriyanto@abc.com\",\r\n    \"phone_number\": \"\",\r\n    \"password\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/users/register",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "71"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"47-34GH5/wB5qGv1SWf69MC7RtK2M0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 13:45:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failed\",\n    \"message\": \"Phone number and password are required.\"\n}"
+						},
+						{
+							"name": "Email and password are empty",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Supriyanto\",\r\n    \"email\": \"\",\r\n    \"phone_number\": \"089843206233\",\r\n    \"password\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/users/register",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "64"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"40-fMIZ5nmKtGQfkunE+VR1EuqUsPQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 13:47:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failed\",\n    \"message\": \"Email and password are required.\"\n}"
+						},
+						{
+							"name": "Email and phone number are empty",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Supriyanto\",\r\n    \"email\": \"\",\r\n    \"phone_number\": \"\",\r\n    \"password\": \"P@ssw0rd\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/users/register",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "68"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"44-Afg1P3dCYoSoR3UBAf6f+yvQtk8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 13:48:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failed\",\n    \"message\": \"Email and phone number are required.\"\n}"
+						},
+						{
+							"name": "Name and password are empty",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"\",\r\n    \"email\": \"supriyanto@abc.com\",\r\n    \"phone_number\": \"089843206233\",\r\n    \"password\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/users/register",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3f-2E5oAKRMdHk0TEGkJo64538xSgs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 13:52:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failed\",\n    \"message\": \"Name and password are required.\"\n}"
+						},
+						{
+							"name": "Name and phone number are empty",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"\",\r\n    \"email\": \"supriyanto@abc.com\",\r\n    \"phone_number\": \"\",\r\n    \"password\": \"P@ssw0rd\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/users/register",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3f-2E5oAKRMdHk0TEGkJo64538xSgs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 13:52:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failed\",\n    \"message\": \"Name and password are required.\"\n}"
+						},
+						{
+							"name": "Name and email are empty",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"\",\r\n    \"email\": \"\",\r\n    \"phone_number\": \"089843206233\",\r\n    \"password\": \"P@ssw0rd\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/users/register",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "60"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3c-byIJFQ6s3mOw4eqIs777pSpmEwU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 13:58:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failed\",\n    \"message\": \"Name and email are required.\"\n}"
+						},
+						{
+							"name": "Name is empty",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"\",\r\n    \"email\": \"supriyanto@abc.com\",\r\n    \"phone_number\": \"089843206233\",\r\n    \"password\": \"P@ssw0rd\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/users/register",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "49"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"31-uBcpiC7cW5N2tpEe/gE/40jlrIw\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 13:59:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failed\",\n    \"message\": \"Name is required.\"\n}"
+						},
+						{
+							"name": "Email is empty",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Supriyanto\",\r\n    \"email\": \"\",\r\n    \"phone_number\": \"089843206233\",\r\n    \"password\": \"P@ssw0rd\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/users/register",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "50"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"32-4F6OXNhUhduYkvZ64refKLG3kF8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 13:59:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failed\",\n    \"message\": \"Email is required.\"\n}"
+						},
+						{
+							"name": "Phone number is empty",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Supriyanto\",\r\n    \"email\": \"supriyanto@abc.com\",\r\n    \"phone_number\": \"\",\r\n    \"password\": \"P@ssw0rd\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/users/register",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "57"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"39-qpmQWv/y85wyRCxFz6sm36Fd7Ow\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 14:04:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failed\",\n    \"message\": \"Phone number is required.\"\n}"
+						},
+						{
+							"name": "Phone number length is less than 12",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Supriyanto\",\r\n    \"email\": \"supriyanto@abc.com\",\r\n    \"phone_number\": \"08984320623\",\r\n    \"password\": \"P@ssw0rd\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/users/register",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"38-cwaBt1xBQqwheIxwIU+7g+X8VvM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 14:05:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failed\",\n    \"message\": \"Phone number is illegal.\"\n}"
+						},
+						{
+							"name": "Password is empty",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Supriyanto\",\r\n    \"email\": \"supriyanto@abc.com\",\r\n    \"phone_number\": \"089843206233\",\r\n    \"password\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/users/register",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"35-aXZVYTYj1SejABkuIyQmJcOnrpE\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 14:06:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failed\",\n    \"message\": \"Password is required.\"\n}"
+						},
+						{
+							"name": "Password length is less than 8",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Supriyanto\",\r\n    \"email\": \"supriyanto@abc.com\",\r\n    \"phone_number\": \"089843206233\",\r\n    \"password\": \"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/users/register",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "77"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4d-rEslSRHwLC75Ag15xsarHotCUuo\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 14:07:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failed\",\n    \"message\": \"Password length must equal or be more than 8.\"\n}"
+						},
+						{
+							"name": "All data are filled in",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Supriyanto\",\r\n    \"email\": \"supriyanto@abc.com\",\r\n    \"phone_number\": \"089843206233\",\r\n    \"password\": \"P@ssw0rd\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/users/register",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2-vyGp6PvFo4RvsFtPoIWeCReyIC8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 14:09:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						},
+						{
+							"name": "All same data are filled in",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Supriyanto\",\r\n    \"email\": \"supriyanto@abc.com\",\r\n    \"phone_number\": \"089843206233\",\r\n    \"password\": \"P@ssw0rd\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/users/register",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34-Sy37PRueAZcyS4DGiU2ZTDR6C44\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 14:10:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failed\",\n    \"message\": \"Email has been taken\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Recipe",
+			"item": [
+				{
+					"name": "Showing list of the Eat, Cook, Repeat recipes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:5000/recipe",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"recipe"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Showing list of the Eat, Cook, Repeat recipes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:5000/recipe",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"recipe"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2946"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b82-XRVSFa+rDfz0fdR+cHzIZH56UwY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 15:25:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"user_id\": 5,\n        \"recipe_image_link\": \"https://asset.kompas.com/crops/GlcvKj58gRTIQ6P5CudHWp3phZI=/0x0:698x465/750x500/data/photo/2022/01/10/61dbc4076c2b3.jpg\",\n        \"title\": \"Soto Ayam Sederhana\",\n        \"ingredients\": \"ayam, kubis, bihun jagung, daun bawang, daun seledri, tomat, cabai, telur rebus, jeruk nipis\",\n        \"how_to_cook\": \"https://www.suara.com/lifestyle/2020/09/22/143850/resep-soto-ayam-sederhana-yang-lezat?page=all\",\n        \"recipe_video_link\": \"https://www.youtube.com/watch?v=5Kauhbzc5K4\",\n        \"created_date\": \"2022-03-24T17:00:00.000Z\"\n    },\n    {\n        \"id\": 2,\n        \"user_id\": 2,\n        \"recipe_image_link\": \"https://img-global.cpcdn.com/recipes/0bab0a15c3ff7104/640x640sq70/photo.webp\",\n        \"title\": \"Soto Mie Asli Bogor\",\n        \"ingredients\": \"daging sapi, kikil, bawang putih, bawang merah, serai, lengkuas, jahe\",\n        \"how_to_cook\": \"https://resepkoki.id/resep/resep-soto-mie-bogor/\",\n        \"recipe_video_link\": \"https://www.youtube.com/watch?v=_1q0ZkdY7qU\",\n        \"created_date\": \"2022-03-24T17:00:00.000Z\"\n    },\n    {\n        \"id\": 3,\n        \"user_id\": 8,\n        \"recipe_image_link\": \"https://i0.wp.com/resepkoki.id/wp-content/uploads/2016/10/Resep-Nasgor-Gila.jpg?fit=500%2C484&ssl=1\",\n        \"title\": \"Nasi Goreng Gila\",\n        \"ingredients\": \"nasi putih, sosis, telur, bakso, bawang putih, bawang merah, daun bawang\",\n        \"how_to_cook\": \"https://www.kompas.com/food/read/2020/10/03/071700575/resep-nasi-goreng-gila-pakai-nasi-sisa-semalam?page=all\",\n        \"recipe_video_link\": \"https://www.youtube.com/watch?v=HWozfMqECoo\",\n        \"created_date\": \"2022-03-24T17:00:00.000Z\"\n    },\n    {\n        \"id\": 4,\n        \"user_id\": 4,\n        \"recipe_image_link\": \"https://i0.wp.com/resepkoki.id/wp-content/uploads/2017/03/Resep-Nasi-Kebuli.jpg?fit=500%2C645&ssl=1\",\n        \"title\": \"Nasi Kebuli Kambing\",\n        \"ingredients\": \"beras, daging kambing, air panas, kismis, minyak samin, pala bubuk, kapulaga, cengkeh, kayu manis, serai\",\n        \"how_to_cook\": \"https://www.happyfresh.id/blog/resep/nasi-kebuli-kambing-arab-betawi/\",\n        \"recipe_video_link\": \"https://www.youtube.com/watch?v=Q63TB00ukX0\",\n        \"created_date\": \"2022-03-25T17:00:00.000Z\"\n    },\n    {\n        \"id\": 5,\n        \"user_id\": 6,\n        \"recipe_image_link\": \"https://www.tehpucukharum.com/wp-content/uploads/2016/02/Yuk-Coba-Bikin-Sop-Buntut-Ala-Hotel-Borobudur.jpg\",\n        \"title\": \"Sop Buntut Borobudur\",\n        \"ingredients\": \"buntut sapi, garam, air, jahe, minyak goreng, kentang, wortel, tomat, daun bawang, seledri, garam\",\n        \"how_to_cook\": \"https://www.kompas.com/food/read/2020/06/17/181200375/resep-sop-buntut-ala-hotel-bintang-5-coba-yuk?page=all\",\n        \"recipe_video_link\": \"https://www.youtube.com/watch?v=cEF_pJNfdBM\",\n        \"created_date\": \"2022-03-25T17:00:00.000Z\"\n    },\n    {\n        \"id\": 6,\n        \"user_id\": 3,\n        \"recipe_image_link\": \"https://i0.wp.com/resepkoki.id/wp-content/uploads/2017/02/Resep-Pindang-Patin.jpg?fit=500%2C455&ssl=1\",\n        \"title\": \"Pindang Patin\",\n        \"ingredients\": \"ikan patin ukuran sedang, air jeruk nipis, air, tomat, cabai rawit, garam\",\n        \"how_to_cook\": \"https://www.kompas.com/food/read/2020/08/09/080800375/resep-pindang-ikan-patin-khas-jambi-bumbu-yang-dipakai-cukup-diiris\",\n        \"recipe_video_link\": \"https://www.youtube.com/watch?v=-zxI9Yv6H4E\",\n        \"created_date\": \"2022-03-25T17:00:00.000Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Showing latest list of the Eat, Cook, Repeat recipes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/recipes/",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"recipes",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Showing latest list of the Eat, Cook, Repeat recipes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/recipes/",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"recipes",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2424"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"978-ZHsmcS7YnxwIt7X8zCdDJyLJ9Mw\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 15:23:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 6,\n        \"user_id\": 3,\n        \"recipe_image_link\": \"https://i0.wp.com/resepkoki.id/wp-content/uploads/2017/02/Resep-Pindang-Patin.jpg?fit=500%2C455&ssl=1\",\n        \"title\": \"Pindang Patin\",\n        \"ingredients\": \"ikan patin ukuran sedang, air jeruk nipis, air, tomat, cabai rawit, garam\",\n        \"how_to_cook\": \"https://www.kompas.com/food/read/2020/08/09/080800375/resep-pindang-ikan-patin-khas-jambi-bumbu-yang-dipakai-cukup-diiris\",\n        \"recipe_video_link\": \"https://www.youtube.com/watch?v=-zxI9Yv6H4E\",\n        \"created_date\": \"2022-03-25T17:00:00.000Z\"\n    },\n    {\n        \"id\": 5,\n        \"user_id\": 6,\n        \"recipe_image_link\": \"https://www.tehpucukharum.com/wp-content/uploads/2016/02/Yuk-Coba-Bikin-Sop-Buntut-Ala-Hotel-Borobudur.jpg\",\n        \"title\": \"Sop Buntut Borobudur\",\n        \"ingredients\": \"buntut sapi, garam, air, jahe, minyak goreng, kentang, wortel, tomat, daun bawang, seledri, garam\",\n        \"how_to_cook\": \"https://www.kompas.com/food/read/2020/06/17/181200375/resep-sop-buntut-ala-hotel-bintang-5-coba-yuk?page=all\",\n        \"recipe_video_link\": \"https://www.youtube.com/watch?v=cEF_pJNfdBM\",\n        \"created_date\": \"2022-03-25T17:00:00.000Z\"\n    },\n    {\n        \"id\": 4,\n        \"user_id\": 4,\n        \"recipe_image_link\": \"https://i0.wp.com/resepkoki.id/wp-content/uploads/2017/03/Resep-Nasi-Kebuli.jpg?fit=500%2C645&ssl=1\",\n        \"title\": \"Nasi Kebuli Kambing\",\n        \"ingredients\": \"beras, daging kambing, air panas, kismis, minyak samin, pala bubuk, kapulaga, cengkeh, kayu manis, serai\",\n        \"how_to_cook\": \"https://www.happyfresh.id/blog/resep/nasi-kebuli-kambing-arab-betawi/\",\n        \"recipe_video_link\": \"https://www.youtube.com/watch?v=Q63TB00ukX0\",\n        \"created_date\": \"2022-03-25T17:00:00.000Z\"\n    },\n    {\n        \"id\": 3,\n        \"user_id\": 8,\n        \"recipe_image_link\": \"https://i0.wp.com/resepkoki.id/wp-content/uploads/2016/10/Resep-Nasgor-Gila.jpg?fit=500%2C484&ssl=1\",\n        \"title\": \"Nasi Goreng Gila\",\n        \"ingredients\": \"nasi putih, sosis, telur, bakso, bawang putih, bawang merah, daun bawang\",\n        \"how_to_cook\": \"https://www.kompas.com/food/read/2020/10/03/071700575/resep-nasi-goreng-gila-pakai-nasi-sisa-semalam?page=all\",\n        \"recipe_video_link\": \"https://www.youtube.com/watch?v=HWozfMqECoo\",\n        \"created_date\": \"2022-03-24T17:00:00.000Z\"\n    },\n    {\n        \"id\": 2,\n        \"user_id\": 2,\n        \"recipe_image_link\": \"https://img-global.cpcdn.com/recipes/0bab0a15c3ff7104/640x640sq70/photo.webp\",\n        \"title\": \"Soto Mie Asli Bogor\",\n        \"ingredients\": \"daging sapi, kikil, bawang putih, bawang merah, serai, lengkuas, jahe\",\n        \"how_to_cook\": \"https://resepkoki.id/resep/resep-soto-mie-bogor/\",\n        \"recipe_video_link\": \"https://www.youtube.com/watch?v=_1q0ZkdY7qU\",\n        \"created_date\": \"2022-03-24T17:00:00.000Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Showing list of the Eat, Cook, Repeat recipes based on the user's ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/recipe/3",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"recipe",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Showing list of the Eat, Cook, Repeat recipes based on the user's ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/recipe/3",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"recipe",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "506"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1fa-5ft2fUrJ7QDWNmdij7xZB6cCuCg\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 15:31:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 6,\n        \"user_id\": 3,\n        \"recipe_image_link\": \"https://i0.wp.com/resepkoki.id/wp-content/uploads/2017/02/Resep-Pindang-Patin.jpg?fit=500%2C455&ssl=1\",\n        \"title\": \"Pindang Patin\",\n        \"ingredients\": \"ikan patin ukuran sedang, air jeruk nipis, air, tomat, cabai rawit, garam\",\n        \"how_to_cook\": \"https://www.kompas.com/food/read/2020/08/09/080800375/resep-pindang-ikan-patin-khas-jambi-bumbu-yang-dipakai-cukup-diiris\",\n        \"recipe_video_link\": \"https://www.youtube.com/watch?v=-zxI9Yv6H4E\",\n        \"created_date\": \"2022-03-25T17:00:00.000Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Showing list of the Eat, Cook, Repeat recipes based on the user names",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/recipes-by-user",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"recipes-by-user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Showing list of the Eat, Cook, Repeat recipes based on the user names",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/recipes-by-user",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"recipes-by-user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1643"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"66b-oWiIbj7bBcFiauRLCo4GtI6ehQ4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 15:49:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"name\": \"Syahrul Wibowo\",\n        \"cuisine_title\": \"Soto Ayam Sederhana\",\n        \"ingredients\": \"ayam, kubis, bihun jagung, daun bawang, daun seledri, tomat, cabai, telur rebus, jeruk nipis\",\n        \"how_to_cook\": \"https://www.suara.com/lifestyle/2020/09/22/143850/resep-soto-ayam-sederhana-yang-lezat?page=all\"\n    },\n    {\n        \"name\": \"Laras Sukmawati\",\n        \"cuisine_title\": \"Soto Mie Asli Bogor\",\n        \"ingredients\": \"daging sapi, kikil, bawang putih, bawang merah, serai, lengkuas, jahe\",\n        \"how_to_cook\": \"https://resepkoki.id/resep/resep-soto-mie-bogor/\"\n    },\n    {\n        \"name\": \"Angga Sudarwanto\",\n        \"cuisine_title\": \"Nasi Goreng Gila\",\n        \"ingredients\": \"nasi putih, sosis, telur, bakso, bawang putih, bawang merah, daun bawang\",\n        \"how_to_cook\": \"https://www.kompas.com/food/read/2020/10/03/071700575/resep-nasi-goreng-gila-pakai-nasi-sisa-semalam?page=all\"\n    },\n    {\n        \"name\": \"Albert Dominggus\",\n        \"cuisine_title\": \"Nasi Kebuli Kambing\",\n        \"ingredients\": \"beras, daging kambing, air panas, kismis, minyak samin, pala bubuk, kapulaga, cengkeh, kayu manis, serai\",\n        \"how_to_cook\": \"https://www.happyfresh.id/blog/resep/nasi-kebuli-kambing-arab-betawi/\"\n    },\n    {\n        \"name\": \"Danang Ahmadi\",\n        \"cuisine_title\": \"Sop Buntut Borobudur\",\n        \"ingredients\": \"buntut sapi, garam, air, jahe, minyak goreng, kentang, wortel, tomat, daun bawang, seledri, garam\",\n        \"how_to_cook\": \"https://www.kompas.com/food/read/2020/06/17/181200375/resep-sop-buntut-ala-hotel-bintang-5-coba-yuk?page=all\"\n    },\n    {\n        \"name\": \"Dadang Suryawan\",\n        \"cuisine_title\": \"Pindang Patin\",\n        \"ingredients\": \"ikan patin ukuran sedang, air jeruk nipis, air, tomat, cabai rawit, garam\",\n        \"how_to_cook\": \"https://www.kompas.com/food/read/2020/08/09/080800375/resep-pindang-ikan-patin-khas-jambi-bumbu-yang-dipakai-cukup-diiris\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Inserting a recipe",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": \"5\",\r\n    \"recipe_image_link\": \"https://asset.kompas.com/crops/5KYhB1YOQmFJcXfdqwalLRnoGxQ=/13x68:985x716/750x500/data/photo/2021/05/22/60a8bfb2021eb.jpg\",\r\n    \"title\": \"Bakmi Jogja Rebus\",\r\n    \"ingredients\": \"mie kuning, dada ayam rebus/goreng, sawi hijau, kol, tomat merah, kaldu ayam, telur ayam\",\r\n    \"how_to_cook\": \"https://resepkoki.id/resep/resep-mie-godog-jawa-mie-rebus-jawa/\",\r\n    \"recipe_video_link\": \"https://www.youtube.com/watch?v=xOKO2wNJkQ0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/recipe",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"recipe"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "All data are empty",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\": \"\",\r\n    \"recipe_image_link\": \"\",\r\n    \"title\": \"\",\r\n    \"ingredients\": \"\",\r\n    \"how_to_cook\": \"\",\r\n    \"recipe_video_link\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/recipe",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"recipe"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "62"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3e-jmJprhrED64ft/Q7Fpwwx+kjUm8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 16:57:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failed\",\n    \"message\": \"All recipe data must be filled\"\n}"
+						},
+						{
+							"name": "Image, recipe and video are required",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\": \"5\",\r\n    \"recipe_image_link\": \"\",\r\n    \"title\": \"\",\r\n    \"ingredients\": \"\",\r\n    \"how_to_cook\": \"\",\r\n    \"recipe_video_link\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/recipe",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"recipe"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "70"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"46-qumN9/jhBnIUN1S/aysrs7l2x6c\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 16:57:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failed\",\n    \"message\": \"You forgot the image, recipe and video\"\n}"
+						},
+						{
+							"name": "Recipe and video are required",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\": \"5\",\r\n    \"recipe_image_link\": \"https://asset.kompas.com/crops/5KYhB1YOQmFJcXfdqwalLRnoGxQ=/13x68:985x716/750x500/data/photo/2021/05/22/60a8bfb2021eb.jpg\",\r\n    \"title\": \"\",\r\n    \"ingredients\": \"\",\r\n    \"how_to_cook\": \"\",\r\n    \"recipe_video_link\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/recipe",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"recipe"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3f-1KjTivuoe/sIzfJpFvMssnZBXaU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 17:01:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failed\",\n    \"message\": \"You forgot the recipe and video\"\n}"
+						},
+						{
+							"name": "Ingredients, instructions and video are required",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\": \"5\",\r\n    \"recipe_image_link\": \"https://asset.kompas.com/crops/5KYhB1YOQmFJcXfdqwalLRnoGxQ=/13x68:985x716/750x500/data/photo/2021/05/22/60a8bfb2021eb.jpg\",\r\n    \"title\": \"Bakmi Jogja Rebus\",\r\n    \"ingredients\": \"\",\r\n    \"how_to_cook\": \"\",\r\n    \"recipe_video_link\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/recipe",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"recipe"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "81"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"51-YBm1jFG0CdQAmC0B9m57UxjMaW8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 17:02:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failed\",\n    \"message\": \"You forgot the ingredients, how to cook and video\"\n}"
+						},
+						{
+							"name": "Instructions and video are required",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\": \"5\",\r\n    \"recipe_image_link\": \"https://asset.kompas.com/crops/5KYhB1YOQmFJcXfdqwalLRnoGxQ=/13x68:985x716/750x500/data/photo/2021/05/22/60a8bfb2021eb.jpg\",\r\n    \"title\": \"Bakmi Jogja Rebus\",\r\n    \"ingredients\": \"mie kuning, dada ayam rebus/goreng, sawi hijau, kol, tomat merah, kaldu ayam, telur ayam\",\r\n    \"how_to_cook\": \"\",\r\n    \"recipe_video_link\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/recipe",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"recipe"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "68"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"44-jDVlI7L80pvb+gkCGd0Za9oLsaQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 17:03:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failed\",\n    \"message\": \"You forgot how to cook and the video\"\n}"
+						},
+						{
+							"name": "Video is required",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\": \"5\",\r\n    \"recipe_image_link\": \"https://asset.kompas.com/crops/5KYhB1YOQmFJcXfdqwalLRnoGxQ=/13x68:985x716/750x500/data/photo/2021/05/22/60a8bfb2021eb.jpg\",\r\n    \"title\": \"Bakmi Jogja Rebus\",\r\n    \"ingredients\": \"mie kuning, dada ayam rebus/goreng, sawi hijau, kol, tomat merah, kaldu ayam, telur ayam\",\r\n    \"how_to_cook\": \"https://resepkoki.id/resep/resep-mie-godog-jawa-mie-rebus-jawa/\",\r\n    \"recipe_video_link\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/recipe",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"recipe"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34-jVsC3NbMWXqOVT/WBrrlYlUnnOo\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 17:04:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failed\",\n    \"message\": \"You forgot the video\"\n}"
+						},
+						{
+							"name": "All data are filled in",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\": \"5\",\r\n    \"recipe_image_link\": \"https://asset.kompas.com/crops/5KYhB1YOQmFJcXfdqwalLRnoGxQ=/13x68:985x716/750x500/data/photo/2021/05/22/60a8bfb2021eb.jpg\",\r\n    \"title\": \"Bakmi Jogja Rebus\",\r\n    \"ingredients\": \"mie kuning, dada ayam rebus/goreng, sawi hijau, kol, tomat merah, kaldu ayam, telur ayam\",\r\n    \"how_to_cook\": \"https://resepkoki.id/resep/resep-mie-godog-jawa-mie-rebus-jawa/\",\r\n    \"recipe_video_link\": \"https://www.youtube.com/watch?v=xOKO2wNJkQ0\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/recipe",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"recipe"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"35-gi49t8HAlljZfCGwGF6mIhGnNOI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 17:07:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"Recipe Bakmi Jogja Rebus added from user with ID: 5\""
+						}
+					]
+				},
+				{
+					"name": "Updating a recipe",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": \"5\",\r\n    \"recipe_image_link\": \"https://asset.kompas.com/crops/5KYhB1YOQmFJcXfdqwalLRnoGxQ=/13x68:985x716/750x500/data/photo/2021/05/22/60a8bfb2021eb.jpg\",\r\n    \"title\": \"Bakmi Rebus Khas Jogja\",\r\n    \"ingredients\": \"mie kuning, dada ayam rebus/goreng, sawi hijau, kol, tomat merah, kaldu ayam, telur ayam\",\r\n    \"how_to_cook\": \"https://resepkoki.id/resep/resep-mie-godog-jawa-mie-rebus-jawa/\",\r\n    \"recipe_video_link\": \"https://www.youtube.com/watch?v=xOKO2wNJkQ0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/recipe/7",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"recipe",
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Updating a recipe",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\": \"5\",\r\n    \"recipe_image_link\": \"https://asset.kompas.com/crops/5KYhB1YOQmFJcXfdqwalLRnoGxQ=/13x68:985x716/750x500/data/photo/2021/05/22/60a8bfb2021eb.jpg\",\r\n    \"title\": \"Bakmi Rebus Khas Jogja\",\r\n    \"ingredients\": \"mie kuning, dada ayam rebus/goreng, sawi hijau, kol, tomat merah, kaldu ayam, telur ayam\",\r\n    \"how_to_cook\": \"https://resepkoki.id/resep/resep-mie-godog-jawa-mie-rebus-jawa/\",\r\n    \"recipe_video_link\": \"https://www.youtube.com/watch?v=xOKO2wNJkQ0\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/recipe/7",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"recipe",
+										"7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "60"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3c-V1UR0VuHNzc1X2iJW5HODgON9ZE\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 17:13:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"Recipe Bakmi Rebus Khas Jogja updated from user with ID: 7\""
+						}
+					]
+				},
+				{
+					"name": "Showing details of the Eat, Cook, Repeat recipe",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/recipe/4",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"recipe",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "The recipe is not available",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/recipe/10",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"recipe",
+										"10"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"36-zVguU3Nns4lLazNcWAizZc6iutU\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Mar 2022 04:32:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Sorry, the recipe has not been available\"\n}"
+						},
+						{
+							"name": "The recipe is available",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/recipe/4",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"recipe",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "489"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e9-SE8tjkYHNTZji8SkZsiqW9AARbU\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Mar 2022 04:33:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 4,\n        \"user_id\": 4,\n        \"recipe_image_link\": \"https://i0.wp.com/resepkoki.id/wp-content/uploads/2017/03/Resep-Nasi-Kebuli.jpg?fit=500%2C645&ssl=1\",\n        \"title\": \"Nasi Kebuli Kambing\",\n        \"ingredients\": \"beras, daging kambing, air panas, kismis, minyak samin, pala bubuk, kapulaga, cengkeh, kayu manis, serai\",\n        \"how_to_cook\": \"https://www.happyfresh.id/blog/resep/nasi-kebuli-kambing-arab-betawi/\",\n        \"recipe_video_link\": \"https://www.youtube.com/watch?v=Q63TB00ukX0\",\n        \"created_date\": \"2022-03-25T17:00:00.000Z\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Recipe Comment",
+			"item": [
+				{
+					"name": "Showing all comments in Eat, Cook, Repeat website",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/comments",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"comments"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Showing all comments in Eat, Cook, Repeat website",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/comments",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"comments"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "477"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1dd-QPfbDff/gxN75Au5EJJCtIuSRmI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 22:36:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"user_id\": 6,\n        \"recipe_id\": 3,\n        \"recipe_comment\": \"Recommended. Nggak kalah dengan yang di abang-abang resepnya\",\n        \"created_date\": \"2022-03-24T17:00:00.000Z\"\n    },\n    {\n        \"id\": 2,\n        \"user_id\": 1,\n        \"recipe_id\": 3,\n        \"recipe_comment\": \"So simple, tapi komplit banget lauk suwirannya.\",\n        \"created_date\": \"2022-03-24T17:00:00.000Z\"\n    },\n    {\n        \"id\": 3,\n        \"user_id\": 8,\n        \"recipe_id\": 2,\n        \"recipe_comment\": \"Semakin rame rasanya dilengkapi emping melinjo, daging tetelan dan risol bihun\",\n        \"created_date\": \"2022-03-24T17:00:00.000Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Showing all comments based on recipe titles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/comments-by-recipe",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"comments-by-recipe"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Showing all comments based on recipe titles",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/comments-by-recipe",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"comments-by-recipe"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "402"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"192-AU1hYcmTpoP0QOGF3BNtxDrcu2A\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 22:42:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"name\": \"Danang Ahmadi\",\n        \"cuisine\": \"Nasi Goreng Gila\",\n        \"commentary\": \"Recommended. Nggak kalah dengan yang di abang-abang resepnya\"\n    },\n    {\n        \"name\": \"David Susanto\",\n        \"cuisine\": \"Nasi Goreng Gila\",\n        \"commentary\": \"So simple, tapi komplit banget lauk suwirannya.\"\n    },\n    {\n        \"name\": \"Angga Sudarwanto\",\n        \"cuisine\": \"Soto Mie Asli Bogor\",\n        \"commentary\": \"Semakin rame rasanya dilengkapi emping melinjo, daging tetelan dan risol bihun\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Inserting a comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": \"8\",\r\n    \"recipe_id\": \"1\",\r\n    \"recipe_comment\": \"Baru lihat resep soto ayam seperti itu. Di mana ayamnya justru disajikan utuh, bukan disuwir\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/comments",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"comments"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "All data are empty",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\": \"\",\r\n    \"recipe_id\": \"\",\r\n    \"recipe_comment\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/comments",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"comments"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "37"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"25-2MoU7ooADpsJyz/W9Yf7nv15Y3I\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 22:53:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"All data must be filled\"\n}"
+						},
+						{
+							"name": "Recipe ID and comment are empty",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\": \"8\",\r\n    \"recipe_id\": \"\",\r\n    \"recipe_comment\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/comments",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"comments"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "46"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2e-Q23ldO+r5Gm97yNLopF48k55lmw\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 22:57:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"You forgot recipe ID and comment\"\n}"
+						},
+						{
+							"name": "Recipe comment is empty",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\": \"8\",\r\n    \"recipe_id\": \"1\",\r\n    \"recipe_comment\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/comments",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"comments"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-DAnveU0fOZo20EgLGhCN+GRFQrk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 22:59:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"You forgot recipe comment\"\n}"
+						},
+						{
+							"name": "All data are filled in",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\": \"8\",\r\n    \"recipe_id\": \"1\",\r\n    \"recipe_comment\": \"Baru lihat resep soto ayam seperti itu. Di mana ayamnya justru disajikan utuh, bukan disuwir\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/comments",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"comments"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34-EVY37ocrEDVM1kDAXO/BNrch7vQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 23:01:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"Comment added for recipe ID 1 from user with ID: 8\""
+						}
+					]
+				},
+				{
+					"name": "Updating a comment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": \"8\",\r\n    \"recipe_id\": \"1\",\r\n    \"recipe_comment\": \"Baru lihat resep soto ayam seperti itu. Di mana ayamnya justru disajikan utuh, bukan disuwir seperti pada umumnya\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/comments/4",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"comments",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Updating a comment",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\": \"8\",\r\n    \"recipe_id\": \"1\",\r\n    \"recipe_comment\": \"Baru lihat resep soto ayam seperti itu. Di mana ayamnya justru disajikan utuh, bukan disuwir seperti pada umumnya\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/comments/4",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"comments",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "25"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19-698jbgfHw7L5k5eG5v4e30EzsD4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 23:09:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"Comment edited for ID 4\""
+						}
+					]
+				},
+				{
+					"name": "Deleting a comment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/comments/4",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"comments",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Deleting a comment",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/comments/4",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"comments",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "25"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19-LtZL8IpSq/knt7Rts+mMr9OCksA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 23:10:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"User deleted with ID: 4\""
+						}
+					]
+				}
+			]
+		}
+	]
+}
