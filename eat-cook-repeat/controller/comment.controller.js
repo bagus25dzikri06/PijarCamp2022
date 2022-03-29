@@ -2,31 +2,27 @@ const { RecipeCommentsModel } = require('../model/comment.model');
 
 const RecipeCommentsController = {
     selectAll: async (req, res) => {
-        const { sortByField } = req.query, sortField = sortByField || 'id';
-
-        await RecipeCommentsModel.getComments(sortField)
-            .then((result) => {
-                res.json(result.rows);
-            })
-            .catch((err) => {
-                res.json(err);
-            })
+        try {
+            const { sortByField } = req.query;
+            const sortField = sortByField || 'id';
+            const data = await RecipeCommentsModel.getComments(sortField);
+            res.json(data.rows[0]);
+        } catch (err) {
+            res.json(err);
+        }
     },
     selectByRecipe: async (req, res) => {
-        const cuisines = 'cuisine', commentaries = 'commentary';
-
-        await RecipeCommentsModel.getCommentsByRecipeName(cuisines, commentaries)
-            .then((result) => {
-                res.json(result.rows);
-            })
-            .catch((err) => {
-                res.json(err);
-            })
+        try {
+            const cuisines = 'cuisine';
+            const commentaries = 'commentary';
+            const data = await RecipeCommentsModel.getCommentsByRecipeName(cuisines, commentaries);
+            res.json(data.rows[0]);
+        } catch (err) {
+            res.json(err);
+        }
     },
     insert: async (req, res) => {
-        const user_id  = req.body.user_id,
-        recipe_id = req.body.recipe_id,
-        recipe_comment = req.body.recipe_comment;
+        const { user_id, recipe_id, recipe_comment } = req.body;
 
         if (!recipe_comment || recipe_comment === '') {
             return res.status(400).json({
@@ -46,39 +42,34 @@ const RecipeCommentsController = {
             });
         } 
 
-        await RecipeCommentsModel.insertComments(user_id, recipe_id, recipe_comment)
-            .then((result) => {
-                res.json(result);
-            })
-            .catch((err) => {
-                res.json(err);
-            })
+        try {
+            const data = await RecipeCommentsModel.insertComments(user_id, recipe_id, recipe_comment)
+            res.json(data);
+        } catch (err) {
+            res.json(err);
+        }
     },
     edit: async (req, res) => {
-        const recipe_comment = req.body.recipe_comment,
-        id = req.params.id;
-
-        await RecipeCommentsModel.editComments(recipe_comment, id)
-            .then((result) => {
-                res.json(result);
-            })
-            .catch((err) => {
-                res.json(err);
-            })
+        try {
+            const { recipe_comment } = req.body;
+            const { id } = req.params; 
+            const data = await RecipeCommentsModel.editComments(recipe_comment, id);
+            res.json(data);
+        } catch (err) {
+            res.json(err);
+        }
     },
     deleted: async (req, res) => {
-        const id = req.params.id;
-
-        await RecipeCommentsModel.deleteComments(id)
-            .then((result) => {
-                res.json(result);
-            })
-            .catch((err) => {
-                res.json(err);
-            })
+        try {
+            const { id } = req.params; 
+            const data = await RecipeCommentsModel.deleteComments(id);
+            res.json(data);
+        } catch (err) {
+            res.json(err);
+        }        
     },
-}
+};
 
 module.exports = {
     RecipeCommentsController,
-}
+};

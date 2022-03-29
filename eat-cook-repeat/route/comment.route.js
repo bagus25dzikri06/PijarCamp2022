@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { RecipeCommentsController } = require('../controller/comment.controller')
+const { RecipeCommentsController } = require('../controller/comment.controller');
 
 router.get('/', RecipeCommentsController.selectAll);
 router.post('/', RecipeCommentsController.insert);

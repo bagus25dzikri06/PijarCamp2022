@@ -68,8 +68,60 @@
 							"_postman_previewlanguage": "json",
 							"header": [
 								{
-									"key": "X-Powered-By",
-									"value": "Express"
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
 								},
 								{
 									"key": "Access-Control-Allow-Origin",
@@ -81,15 +133,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "583"
+									"value": "992"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"247-1rFoeU9IdXju8XssR2+LOl0d8hM\""
+									"value": "W/\"3e0-BWJHimVINzLqsWlqbt4PVDIRHzs\""
 								},
 								{
 									"key": "Date",
-									"value": "Sun, 27 Mar 2022 13:17:22 GMT"
+									"value": "Tue, 29 Mar 2022 08:07:46 GMT"
 								},
 								{
 									"key": "Connection",
@@ -101,7 +153,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"David Susanto\",\n        \"email\": \"david@abc.com\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Laras Sukmawati\",\n        \"email\": \"laras@abc.com\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Dadang Suryawan\",\n        \"email\": \"dangSur@abc.com\"\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Albert Dominggus\",\n        \"email\": \"albert@abc.com\"\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Syahrul Wibowo\",\n        \"email\": \"bowo@abc.com\"\n    },\n    {\n        \"id\": 6,\n        \"name\": \"Danang Ahmadi\",\n        \"email\": \"danang@abc.com\"\n    },\n    {\n        \"id\": 7,\n        \"name\": \"Wahyu Syahputra\",\n        \"email\": \"wahyu_s@abc.com\"\n    },\n    {\n        \"id\": 8,\n        \"name\": \"Angga Sudarwanto\",\n        \"email\": \"angga_s@abc.com\"\n    },\n    {\n        \"id\": 9,\n        \"name\": \"Daud Sulaiman\",\n        \"email\": \"daud@abc.com\"\n    },\n    {\n        \"id\": 10,\n        \"name\": \"Jajang Sukmana\",\n        \"email\": \"jajang@abc.com\"\n    }\n]"
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"David Susanto\",\n        \"email\": \"david@abc.com\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Laras Sukmawati\",\n        \"email\": \"laras@abc.com\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Dadang Suryawan\",\n        \"email\": \"dangSur@abc.com\"\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Albert Dominggus\",\n        \"email\": \"albert@abc.com\"\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Syahrul Wibowo\",\n        \"email\": \"bowo@abc.com\"\n    },\n    {\n        \"id\": 6,\n        \"name\": \"Danang Ahmadi\",\n        \"email\": \"danang@abc.com\"\n    },\n    {\n        \"id\": 7,\n        \"name\": \"Wahyu Syahputra\",\n        \"email\": \"wahyu_s@abc.com\"\n    },\n    {\n        \"id\": 8,\n        \"name\": \"Angga Sudarwanto\",\n        \"email\": \"angga_s@abc.com\"\n    },\n    {\n        \"id\": 9,\n        \"name\": \"Daud Sulaiman\",\n        \"email\": \"daud@abc.com\"\n    },\n    {\n        \"id\": 10,\n        \"name\": \"Jajang Sukmana\",\n        \"email\": \"jajang@abc.com\"\n    },\n    {\n        \"id\": 11,\n        \"name\": \"Supriyanto\",\n        \"email\": \"supriyanto@abc.com\"\n    },\n    {\n        \"id\": 12,\n        \"name\": \"Sari Rismawati\",\n        \"email\": \"saririsma@abc.com\"\n    },\n    {\n        \"id\": 13,\n        \"name\": \"Wahyu Sudarmanto\",\n        \"email\": \"wahyu@abc.com\"\n    },\n    {\n        \"id\": 14,\n        \"name\": \"Adi Priyanto\",\n        \"email\": \"adi@abc.com\"\n    },\n    {\n        \"id\": 20,\n        \"name\": \"Adi Priyanto\",\n        \"email\": \"adi_p@abc.com\"\n    },\n    {\n        \"id\": 21,\n        \"name\": \"Jarwo Sukmawan\",\n        \"email\": \"jarwo@abc.com\"\n    },\n    {\n        \"id\": 22,\n        \"name\": \"Dicky Supriyatno\",\n        \"email\": \"d1cky@abc.com\"\n    }\n]"
 						}
 					]
 				},
@@ -112,7 +164,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Supriyanto\",\r\n    \"email\": \"supriyanto@abc.com\",\r\n    \"phone_number\": \"089843206233\",\r\n    \"password\": \"P@ssw0rd\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Dicky Supriyatno\",\r\n    \"email\": \"d1cky@abc.com\",\r\n    \"phone_number\": \"088811112222\",\r\n    \"password\": \"d1cky_123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1387,6 +1439,286 @@
 							"body": "{\n    \"status\": \"failed\",\n    \"message\": \"Email has been taken\"\n}"
 						}
 					]
+				},
+				{
+					"name": "Updating email and phone number from user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"adi.p@abc.com\",\r\n    \"phone_number\": \"088834271500\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/users/update/14",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"update",
+								"14"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Updating email and phone number from user",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"adi.p@abc.com\",\r\n    \"phone_number\": \"088834271500\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/users/update/14",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"update",
+										"14"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "34"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"22-32DFqOjugltR8e24ck01iYfx8IE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 29 Mar 2022 09:02:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"Email edited for user with ID 14\""
+						}
+					]
+				},
+				{
+					"name": "Deleting user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/users/delete/10",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"delete",
+								"10"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Deleting user",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/users/delete/10",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"delete",
+										"10"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "30"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e-j+zR2CaqyPQrwC9Uj7IiDSeb8W4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 29 Mar 2022 09:05:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"User is successfully deleted\""
+						}
+					]
 				}
 			]
 		},
@@ -1406,13 +1738,13 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "localhost:5000/recipe",
+							"raw": "localhost:5000/recipes",
 							"host": [
 								"localhost"
 							],
 							"port": "5000",
 							"path": [
-								"recipe"
+								"recipes"
 							]
 						}
 					},
@@ -1497,14 +1829,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:5000/recipes/",
+							"raw": "localhost:5000/latest",
 							"host": [
 								"localhost"
 							],
 							"port": "5000",
 							"path": [
-								"recipes",
-								""
+								"latest"
 							]
 						}
 					},
@@ -1583,14 +1914,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:5000/recipe/3",
+							"raw": "localhost:5000/recipes/4",
 							"host": [
 								"localhost"
 							],
 							"port": "5000",
 							"path": [
-								"recipe",
-								"3"
+								"recipes",
+								"4"
 							]
 						}
 					},
@@ -1736,7 +2067,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"user_id\": \"5\",\r\n    \"recipe_image_link\": \"https://asset.kompas.com/crops/5KYhB1YOQmFJcXfdqwalLRnoGxQ=/13x68:985x716/750x500/data/photo/2021/05/22/60a8bfb2021eb.jpg\",\r\n    \"title\": \"Bakmi Jogja Rebus\",\r\n    \"ingredients\": \"mie kuning, dada ayam rebus/goreng, sawi hijau, kol, tomat merah, kaldu ayam, telur ayam\",\r\n    \"how_to_cook\": \"https://resepkoki.id/resep/resep-mie-godog-jawa-mie-rebus-jawa/\",\r\n    \"recipe_video_link\": \"https://www.youtube.com/watch?v=xOKO2wNJkQ0\"\r\n}",
+							"raw": "{\r\n    \"user_id\": \"8\",\r\n    \"recipe_image_link\": \"https://asset.kompas.com/crops/byIZ1zZDrPRK-zPDiciwCkJ-0g4=/0x0:698x465/750x500/data/photo/2021/01/05/5ff478b69ccf8.jpg\",\r\n    \"title\": \"Seblak Ceker\",\r\n    \"ingredients\": \"telur, kerupuk merah, caisim, tauge, kecap manis, garam, kaldu ayam, merica bubuk, gula pasir\",\r\n    \"how_to_cook\": \"https://www.kompas.com/food/read/2021/01/06/101000975/resep-seblak-ceker-mercon-kuah-camilan-saat-cuaca-dingin\",\r\n    \"recipe_video_link\": \"https://www.youtube.com/watch?v=a6l_SM62ziw\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1744,13 +2075,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:5000/recipe",
+							"raw": "localhost:5000/recipes",
 							"host": [
 								"localhost"
 							],
 							"port": "5000",
 							"path": [
-								"recipe"
+								"recipes"
 							]
 						}
 					},
@@ -2219,7 +2550,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"user_id\": \"5\",\r\n    \"recipe_image_link\": \"https://asset.kompas.com/crops/5KYhB1YOQmFJcXfdqwalLRnoGxQ=/13x68:985x716/750x500/data/photo/2021/05/22/60a8bfb2021eb.jpg\",\r\n    \"title\": \"Bakmi Rebus Khas Jogja\",\r\n    \"ingredients\": \"mie kuning, dada ayam rebus/goreng, sawi hijau, kol, tomat merah, kaldu ayam, telur ayam\",\r\n    \"how_to_cook\": \"https://resepkoki.id/resep/resep-mie-godog-jawa-mie-rebus-jawa/\",\r\n    \"recipe_video_link\": \"https://www.youtube.com/watch?v=xOKO2wNJkQ0\"\r\n}",
+							"raw": "{\r\n    \"user_id\": 8,\r\n    \"recipe_image_link\": \"https://asset.kompas.com/crops/byIZ1zZDrPRK-zPDiciwCkJ-0g4=/0x0:698x465/750x500/data/photo/2021/01/05/5ff478b69ccf8.jpg\",\r\n    \"title\": \"Seblak Ceker Bandung\",\r\n    \"ingredients\": \"telur kocok, kerupuk merah, caisim, tauge, kecap manis, garam, kaldu ayam, merica bubuk, gula pasir\",\r\n    \"how_to_cook\": \"https://www.kompas.com/food/read/2021/01/06/101000975/resep-seblak-ceker-mercon-kuah-camilan-saat-cuaca-dingin\",\r\n    \"recipe_video_link\": \"https://www.youtube.com/watch?v=a6l_SM62ziw\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2227,14 +2558,14 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:5000/recipe/7",
+							"raw": "localhost:5000/recipes/8",
 							"host": [
 								"localhost"
 							],
 							"port": "5000",
 							"path": [
-								"recipe",
-								"7"
+								"recipes",
+								"8"
 							]
 						}
 					},
@@ -2313,14 +2644,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:5000/recipe/4",
+							"raw": "localhost:5000/recipes/5",
 							"host": [
 								"localhost"
 							],
 							"port": "5000",
 							"path": [
-								"recipe",
-								"4"
+								"recipes",
+								"5"
 							]
 						}
 					},
@@ -2438,6 +2769,170 @@
 							],
 							"cookie": [],
 							"body": "[\n    {\n        \"id\": 4,\n        \"user_id\": 4,\n        \"recipe_image_link\": \"https://i0.wp.com/resepkoki.id/wp-content/uploads/2017/03/Resep-Nasi-Kebuli.jpg?fit=500%2C645&ssl=1\",\n        \"title\": \"Nasi Kebuli Kambing\",\n        \"ingredients\": \"beras, daging kambing, air panas, kismis, minyak samin, pala bubuk, kapulaga, cengkeh, kayu manis, serai\",\n        \"how_to_cook\": \"https://www.happyfresh.id/blog/resep/nasi-kebuli-kambing-arab-betawi/\",\n        \"recipe_video_link\": \"https://www.youtube.com/watch?v=Q63TB00ukX0\",\n        \"created_date\": \"2022-03-25T17:00:00.000Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Searching for the recipe title in Eat, Cook, Repeat",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/recipes/search/query?str=jogja",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"recipes",
+								"search",
+								"query"
+							],
+							"query": [
+								{
+									"key": "str",
+									"value": "jogja"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Searching for the recipe title in Eat, Cook, Repeat",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/recipes/search/query?str=jogja",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"recipes",
+										"search",
+										"query"
+									],
+									"query": [
+										{
+											"key": "str",
+											"value": "jogja"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "490"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1ea-RAmEvUTKUfbJn557IsAvFinnlwI\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 29 Mar 2022 09:08:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 7,\n    \"user_id\": 5,\n    \"recipe_image_link\": \"https://asset.kompas.com/crops/5KYhB1YOQmFJcXfdqwalLRnoGxQ=/13x68:985x716/750x500/data/photo/2021/05/22/60a8bfb2021eb.jpg\",\n    \"title\": \"Bakmi Rebus Khas Jogja\",\n    \"ingredients\": \"mie kuning, dada ayam rebus/goreng, sawi hijau, kol, tomat merah, kaldu ayam, telur ayam\",\n    \"how_to_cook\": \"https://resepkoki.id/resep/resep-mie-godog-jawa-mie-rebus-jawa/\",\n    \"recipe_video_link\": \"https://www.youtube.com/watch?v=xOKO2wNJkQ0\",\n    \"created_date\": \"2022-03-27T17:00:00.000Z\"\n}"
 						}
 					]
 				}
@@ -2912,7 +3407,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"user_id\": \"8\",\r\n    \"recipe_id\": \"1\",\r\n    \"recipe_comment\": \"Baru lihat resep soto ayam seperti itu. Di mana ayamnya justru disajikan utuh, bukan disuwir seperti pada umumnya\"\r\n}",
+							"raw": "{\r\n    \"user_id\": 4,\r\n    \"recipe_id\": 8,\r\n    \"recipe_comment\": \"Mantap sekali resepnya, boleh dicoba kreasikan dengan bahan lain nih sepertinya, terutama bakso dan sosis yang selalu hypening\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

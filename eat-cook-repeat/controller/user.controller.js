@@ -1,12 +1,12 @@
 const bcrypt = require('bcrypt');
 const { UsersModel } = require('../model/user.model');
-const { pool } = require('../db');
+const { pool } = require('../config/db');
 
 const UsersController = {
     getUsers: (req, res) => {
         pool.query('SELECT * FROM Users', (error, results) => {
             if (error) {
-                return res.status(400).json({ status: 'failed', message: error.code });
+                return res.status(400).json({ status: 'failed', message: error.message });
             }
     
             const users = results.rows.map(user => {
@@ -94,15 +94,14 @@ const UsersController = {
                             [name, email, phone_number, encryptedPassword],
                             (err) => {
                                 if (err) {
-                                    reject(err.code);
+                                    reject(err.message);
                                 } else {
-                                    UsersModel.getUser(email).then((user) => {
-                                        user = {
-                                            id: user.id,
-                                            name: user.name,
-                                            email: user.email,
+                                    UsersModel.getUser(email).then((successMessage) => {
+                                        successMessage = {
+                                            status: 'success',
+                                            message: 'User is added successfully'
                                         };
-                                        return res.status(201).json(user);
+                                        return res.status(201).json(successMessage);
                                     });
                                 }
                             }
@@ -115,6 +114,26 @@ const UsersController = {
             );
         });
     },
+    update: async (req, res) => {
+        try {
+            const email = req.body.email, 
+            phone_number = req.body.phone_number,
+            id = req.params.id,
+            data = await UsersModel.updateUser(email, phone_number, id);
+            res.json(data);
+        } catch (err) {
+            res.json(err);
+        }
+    },
+    delete: async (req, res) => {
+        try {
+            const id = req.params.id, 
+            data = await UsersModel.deleteUser(id);
+            res.json(data);
+        } catch (err) {
+            res.json(err);
+        }
+    }
 };
 
 module.exports = {

@@ -4,7 +4,7 @@ const { RecipesController } = require('../controller/recipe.controller')
 
 router.get('/', RecipesController.selectAll);
 router.get('/:id', RecipesController.selectById);
-router.get('/search/:str', RecipesController.selectByTitle);
+router.get('/search/query', RecipesController.selectByTitle);
 router.get('/recipes-by-user', RecipesController.selectByUser);
 router.post('/', RecipesController.insert);
 router.put('/:id', RecipesController.update);

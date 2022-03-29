@@ -1,4 +1,4 @@
-const { pool } = require('../db')
+const { pool } = require('../config/db')
 
 const RecipesModel = {
     getRecipes: (sortByField) => {
@@ -44,7 +44,7 @@ const RecipesModel = {
     getRecipesByUser: (users, recipes) => {
         return new Promise((resolve, reject) => {
             recipesByUser = `SELECT users.name, recipes.title AS cuisine_title, recipes.ingredients, recipes.how_to_cook ` +
-                            `FROM ${users} CROSS JOIN ${recipes}`
+                            `FROM ${users} INNER JOIN ${recipes} ON recipes.user_id = users.id`
       
             pool.query(recipesByUser, (error, result) => {
               if (error) {

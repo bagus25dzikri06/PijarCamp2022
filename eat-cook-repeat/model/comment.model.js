@@ -1,4 +1,4 @@
-const { pool } = require('../db');
+const { pool } = require('../config/db');
 
 const RecipeCommentsModel = {
     getComments: (sortByField) => {
@@ -14,7 +14,8 @@ const RecipeCommentsModel = {
     getCommentsByRecipeName: (cuisine, commentary) => {
         return new Promise((resolve, reject) => {
             commentsByRecipe = `SELECT users.name, recipes.title AS ${cuisine}, recipe_comments.recipe_comment AS ${commentary} ` + 
-                               `FROM recipes CROSS JOIN users CROSS JOIN recipe_comments` 
+                               `FROM recipes INNER JOIN users ON recipes.user_id = users.id `+
+                               `INNER JOIN recipe_comments ON recipe_comments.recipe_id = recipes.id` 
 
             pool.query(commentsByRecipe, (error, results) => {
                 if (error) {
