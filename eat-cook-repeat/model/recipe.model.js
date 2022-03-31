@@ -1,9 +1,9 @@
 const { pool } = require('../config/db')
 
 const RecipesModel = {
-    getRecipes: (sortByField) => {
+    getRecipeTotal: () => {
         return new Promise((resolve, reject) => {
-            pool.query(`SELECT * FROM recipes ORDER BY ${sortByField}`, (error, results) => {
+            pool.query(`SELECT COUNT(*) FROM recipes `, (error, results) => {
                 if (error) {
                   reject(error);
                 }
@@ -11,9 +11,30 @@ const RecipesModel = {
             });
         })
     },
-    searchRecipes: (recipesearch) => {
+    getRecipeTotalBasedOnTitle: (recipesearch) => {
         return new Promise((resolve, reject) => {
-            pool.query('SELECT * FROM recipes WHERE LOWER(title) LIKE LOWER($1)', [`%${recipesearch}%`], (error, results) => {
+            pool.query(`SELECT COUNT(*) FROM recipes WHERE LOWER(title) LIKE LOWER($1)`, [`%${recipesearch}%`], (error, results) => {
+                if (error) {
+                  reject(error);
+                }
+                resolve(results);
+            });
+        })
+    },
+    getRecipes: (sortByField, limit, offset) => {
+        return new Promise((resolve, reject) => {
+            pool.query(`SELECT * FROM recipes ORDER BY ${sortByField} LIMIT ${limit} OFFSET ${offset}`, (error, results) => {
+                if (error) {
+                  reject(error);
+                }
+                resolve(results);
+            });
+        })
+    },
+    searchRecipes: (recipesearch, limit, offset) => {
+        return new Promise((resolve, reject) => {
+            pool.query(`SELECT * FROM recipes WHERE LOWER(title) LIKE LOWER($1) LIMIT ${limit} OFFSET ${offset}`, 
+            [`%${recipesearch}%`], (error, results) => {
                 if (error) {
                   reject(error);
                 }

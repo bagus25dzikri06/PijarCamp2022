@@ -1,4 +1,5 @@
 const { RecipeCommentsModel } = require('../model/comment.model');
+const { success, failed } = require('../helpers/response');
 
 const RecipeCommentsController = {
     selectAll: async (req, res) => {
@@ -6,9 +7,9 @@ const RecipeCommentsController = {
             const { sortByField } = req.query;
             const sortField = sortByField || 'id';
             const data = await RecipeCommentsModel.getComments(sortField);
-            res.json(data.rows[0]);
+            success(res, data, 'success', 'get all comments successfully');
         } catch (err) {
-            res.json(err);
+            failed(res, err.message, 'failed', 'failed to get all comments');
         }
     },
     selectByRecipe: async (req, res) => {
@@ -16,37 +17,37 @@ const RecipeCommentsController = {
             const cuisines = 'cuisine';
             const commentaries = 'commentary';
             const data = await RecipeCommentsModel.getCommentsByRecipeName(cuisines, commentaries);
-            res.json(data.rows[0]);
+            success(res, data, 'success', 'get all comments successfully based on recipe');
         } catch (err) {
-            res.json(err);
+            failed(res, err.message, 'failed', 'failed to get all comments based on recipe');
         }
     },
     insert: async (req, res) => {
-        const { user_id, recipe_id, recipe_comment } = req.body;
-
-        if (!recipe_comment || recipe_comment === '') {
-            return res.status(400).json({
-                message: 'You forgot recipe comment',
-            });
-        }
-        
-        if (!recipe_id || !recipe_comment || recipe_id === '' || recipe_comment === '') {
-            return res.status(400).json({
-                message: 'You forgot recipe ID and comment',
-            });
-        }
-
-        if (!user_id || !recipe_id || !recipe_comment || user_id === '' || recipe_id === '' || recipe_comment === '') {
-            return res.status(400).json({
-                message: 'All data must be filled',
-            });
-        } 
-
         try {
+            const { user_id, recipe_id, recipe_comment } = req.body;
+
+            if (!recipe_comment || recipe_comment === '') {
+                return res.status(400).json({
+                    message: 'You forgot recipe comment',
+                });
+            }
+            
+            if (!recipe_id || !recipe_comment || recipe_id === '' || recipe_comment === '') {
+                return res.status(400).json({
+                    message: 'You forgot recipe ID and comment',
+                });
+            }
+
+            if (!user_id || !recipe_id || !recipe_comment || user_id === '' || recipe_id === '' || recipe_comment === '') {
+                return res.status(400).json({
+                    message: 'All data must be filled',
+                });
+            } 
+
             const data = await RecipeCommentsModel.insertComments(user_id, recipe_id, recipe_comment)
-            res.json(data);
+            success(res, data, 'success', 'Comment is added successfully');
         } catch (err) {
-            res.json(err);
+            failed(res, err.message, 'failed', 'Comment is failed to be added');
         }
     },
     edit: async (req, res) => {
@@ -54,18 +55,18 @@ const RecipeCommentsController = {
             const { recipe_comment } = req.body;
             const { id } = req.params; 
             const data = await RecipeCommentsModel.editComments(recipe_comment, id);
-            res.json(data);
+            success(res, data, 'success', 'Comment is updated successfully');
         } catch (err) {
-            res.json(err);
+            failed(res, err.message, 'failed', 'Comment is failed to be updated');
         }
     },
     deleted: async (req, res) => {
         try {
             const { id } = req.params; 
             const data = await RecipeCommentsModel.deleteComments(id);
-            res.json(data);
+            success(res, data, 'success', 'Comment is deleted successfully');
         } catch (err) {
-            res.json(err);
+            failed(res, err.message, 'failed', 'Comment is failed to be deleted');
         }        
     },
 };

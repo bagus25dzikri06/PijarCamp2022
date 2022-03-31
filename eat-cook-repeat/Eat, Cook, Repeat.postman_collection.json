@@ -2790,27 +2790,26 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:5000/recipes/search/query?str=jogja",
+							"raw": "localhost:5000/recipes/query?str=kebuli",
 							"host": [
 								"localhost"
 							],
 							"port": "5000",
 							"path": [
 								"recipes",
-								"search",
 								"query"
 							],
 							"query": [
 								{
 									"key": "str",
-									"value": "jogja"
+									"value": "kebuli"
 								}
 							]
 						}
 					},
 					"response": [
 						{
-							"name": "Searching for the recipe title in Eat, Cook, Repeat",
+							"name": "Searching for the recipe title in Eat, Cook, Repeat if the recipe doesn't exist",
 							"originalRequest": {
 								"method": "GET",
 								"header": [],
@@ -2824,20 +2823,19 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:5000/recipes/search/query?str=jogja",
+									"raw": "localhost:5000/recipes/query?str=talam",
 									"host": [
 										"localhost"
 									],
 									"port": "5000",
 									"path": [
 										"recipes",
-										"search",
 										"query"
 									],
 									"query": [
 										{
 											"key": "str",
-											"value": "jogja"
+											"value": "talam"
 										}
 									]
 								}
@@ -2912,15 +2910,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "490"
+									"value": "37"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"1ea-RAmEvUTKUfbJn557IsAvFinnlwI\""
+									"value": "W/\"25-VeJVz+M+dZovs7uXY+ez4l+u1Q0\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 29 Mar 2022 09:08:37 GMT"
+									"value": "Wed, 30 Mar 2022 01:43:08 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2932,7 +2930,131 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"id\": 7,\n    \"user_id\": 5,\n    \"recipe_image_link\": \"https://asset.kompas.com/crops/5KYhB1YOQmFJcXfdqwalLRnoGxQ=/13x68:985x716/750x500/data/photo/2021/05/22/60a8bfb2021eb.jpg\",\n    \"title\": \"Bakmi Rebus Khas Jogja\",\n    \"ingredients\": \"mie kuning, dada ayam rebus/goreng, sawi hijau, kol, tomat merah, kaldu ayam, telur ayam\",\n    \"how_to_cook\": \"https://resepkoki.id/resep/resep-mie-godog-jawa-mie-rebus-jawa/\",\n    \"recipe_video_link\": \"https://www.youtube.com/watch?v=xOKO2wNJkQ0\",\n    \"created_date\": \"2022-03-27T17:00:00.000Z\"\n}"
+							"body": "{\n    \"message\": \"Sorry, no recipes found\"\n}"
+						},
+						{
+							"name": "Searching for the recipe title in Eat, Cook, Repeat if the recipe exists",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/recipes/query?str=kebuli",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"recipes",
+										"query"
+									],
+									"query": [
+										{
+											"key": "str",
+											"value": "kebuli"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "487"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e7-7KfROE48CNR3wIohVyiSWRlgjuc\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Mar 2022 01:44:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"user_id\": 4,\n    \"recipe_image_link\": \"https://i0.wp.com/resepkoki.id/wp-content/uploads/2017/03/Resep-Nasi-Kebuli.jpg?fit=500%2C645&ssl=1\",\n    \"title\": \"Nasi Kebuli Kambing\",\n    \"ingredients\": \"beras, daging kambing, air panas, kismis, minyak samin, pala bubuk, kapulaga, cengkeh, kayu manis, serai\",\n    \"how_to_cook\": \"https://www.happyfresh.id/blog/resep/nasi-kebuli-kambing-arab-betawi/\",\n    \"recipe_video_link\": \"https://www.youtube.com/watch?v=Q63TB00ukX0\",\n    \"created_date\": \"2022-03-25T17:00:00.000Z\"\n}"
 						}
 					]
 				}

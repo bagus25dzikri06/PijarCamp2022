@@ -1,4 +1,5 @@
-const { pool } = require('../config/db')
+const { pool } = require('../config/db');
+const bcrypt = require('bcrypt');
 
 const UsersModel = {
     isUserExists: (email) => {
@@ -7,7 +8,7 @@ const UsersModel = {
                 if (error) {
                     reject(error)
                 }
-                resolve(results.rowCount > 0)
+                resolve(results)
             })
         })
     },
@@ -18,6 +19,27 @@ const UsersModel = {
                     reject(error)
                 }
                 resolve(results)
+            })
+        })
+    },
+    insertUser: (name, email, phone_number, password) => {
+        return new Promise((resolve, reject) => {
+            const saltRounds = 10
+            bcrypt.hash(password, saltRounds, (err, hash) => {
+                if (err) {
+                    reject(err.message);
+                }
+                
+                pool.query(
+                    'INSERT INTO Users (name, email, phone_number, password) VALUES ($1, $2, $3, $4)',
+                    [name, email, phone_number, hash],
+                    (error, results) => {
+                        if (error) {
+                            reject(error);
+                        }
+                        resolve(`User is added successfully`);
+                    }
+                )
             })
         })
     },
