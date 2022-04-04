@@ -1,5 +1,5 @@
-const { pool } = require('../config/db');
 const bcrypt = require('bcrypt');
+const { pool } = require('../config/db');
 
 const UsersModel = {
     isUserExists: (email) => {
@@ -22,7 +22,17 @@ const UsersModel = {
             })
         })
     },
-    insertUser: (name, email, phone_number, password) => {
+    getPassword: (password) => {
+        return new Promise((resolve, reject) => {
+            pool.query('SELECT * FROM users WHERE password = $1', [password], (error, results) => {
+                if (error) {
+                    reject(error)
+                }
+                resolve(results)
+            })
+        })
+    },
+    insertUser: (name, email, phone_number, password, level) => {
         return new Promise((resolve, reject) => {
             const saltRounds = 10
             bcrypt.hash(password, saltRounds, (err, hash) => {
@@ -31,8 +41,8 @@ const UsersModel = {
                 }
                 
                 pool.query(
-                    'INSERT INTO Users (name, email, phone_number, password) VALUES ($1, $2, $3, $4)',
-                    [name, email, phone_number, hash],
+                    'INSERT INTO Users (name, email, phone_number, password, level) VALUES ($1, $2, $3, $4, $5)',
+                    [name, email, phone_number, hash, level],
                     (error, results) => {
                         if (error) {
                             reject(error);
@@ -46,13 +56,27 @@ const UsersModel = {
     updateUser: (email, phone_number, id) => {
         return new Promise((resolve, reject) => {
             pool.query(
-                'UPDATE users SET email = $1, phone_number = $2 WHERE id = $3',
-                [email, phone_number, id],
+                'UPDATE users SET email = $1, phone_number = $2, WHERE id = $3',
+                [email, phone_number, password, id],
                 (error, results) => {
                     if (error) {
                         reject(error);
                     }
                     resolve(`Email edited for user with ID ${id}`);
+                }
+            )
+        })
+    },
+    updatePassword: (password, id) => {
+        return new Promise((resolve, reject) => {
+            pool.query(
+                'UPDATE users SET password = $1 WHERE id = $3',
+                [password, id],
+                (error, results) => {
+                    if (error) {
+                        reject(error);
+                    }
+                    resolve(`Password edited for user with ID ${id}`);
                 }
             )
         })
@@ -64,6 +88,26 @@ const UsersModel = {
                     reject(error);
                 }
                 resolve(`User is successfully deleted`);
+            })
+        })
+    },
+    activateUser: (name) => {
+        return new Promise((resolve, reject) => {
+            pool.query('UPDATE users SET is_active = TRUE WHERE name = $1', [name], (error, results) => {
+                if (error) {
+                    reject(error);
+                }
+                resolve(`User is successfully activated`);
+            })
+        })
+    },
+    deactivateUser: (name) => {
+        return new Promise((resolve, reject) => {
+            pool.query('UPDATE users SET is_active = FALSE WHERE name = $1', [name], (error, results) => {
+                if (error) {
+                    reject(error);
+                }
+                resolve(`User is successfully deactivated`);
             })
         })
     }

@@ -6,12 +6,15 @@ const xss = require('xss-clean');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-const users = require('./route/user.route');
-const recipes = require('./route/recipe.route');
-const comments = require('./route/comment.route');
+const { auth } = require('./src/middleware/jwtAuth');
+const { isUser, isAdmin } = require('./src/middleware/authorization');
 
-const { RecipesController } = require('./controller/recipe.controller');
-const { RecipeCommentsController } = require('./controller/comment.controller');
+const users = require('./src/route/user.route');
+const recipes = require('./src/route/recipe.route');
+const comments = require('./src/route/comment.route');
+
+const { RecipesController } = require('./src/controller/recipe.controller');
+const { RecipeCommentsController } = require('./src/controller/comment.controller');
 
 const app = express();
 
@@ -31,9 +34,9 @@ app.use('/comments', comments);
 
 const port = process.env.PORT || 5000;
 
+app.get('/', RecipesController.selectAll).get('/query', RecipesController.selectByTitle);
 app.get('/latest', RecipesController.latest);
 app.get('/recipes-by-user', RecipesController.selectByUser);
-
 app.get('/comments-by-recipe', RecipeCommentsController.selectByRecipe);
 
 app.get('/', (req, res) => {

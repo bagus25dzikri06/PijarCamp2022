@@ -28,10 +28,11 @@ module.exports = {
             message
         })
     },
-    successWithToken: (res, token, status, message) => {
+    successWithToken: (res, token, refreshToken, status, message) => {
         res.json({
             status,
             token,
+            refreshToken,
             message
         })
     }

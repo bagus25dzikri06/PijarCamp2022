@@ -93,7 +93,6 @@ const RecipesController = {
         try {
             const { 
                 user_id,
-                recipe_image_link, 
                 title, 
                 ingredients, 
                 how_to_cook, 
@@ -101,7 +100,6 @@ const RecipesController = {
              } = req.body;
     
             let userIDCheck = !user_id || user_id === '', 
-            imageCheck = !recipe_image_link || recipe_image_link === '', 
             titleCheck = !title || title === '', 
             ingredientsCheck = !ingredients || ingredients === '',
             howToCookCheck = !how_to_cook || how_to_cook === '',
@@ -109,7 +107,6 @@ const RecipesController = {
     
             if (
                 userIDCheck && 
-                imageCheck &&
                 titleCheck &&
                 ingredientsCheck &&
                 howToCookCheck &&
@@ -120,18 +117,7 @@ const RecipesController = {
                     message: 'All recipe data must be filled',
                 });
             } else if (
-                imageCheck 
-                && titleCheck
-                && ingredientsCheck
-                && howToCookCheck
-                && videoCheck
-            ) {
-                return res.status(400).json({
-                    status: 'failed',
-                    message: 'You forgot the image, recipe and video',
-                });
-            } else if (
-                titleCheck 
+                titleCheck
                 && ingredientsCheck
                 && howToCookCheck
                 && videoCheck
@@ -167,7 +153,6 @@ const RecipesController = {
             }
 
             const data = await RecipesModel.addRecipe(user_id, 
-                recipe_image_link, 
                 title, 
                 ingredients, 
                 how_to_cook, 
@@ -180,8 +165,8 @@ const RecipesController = {
     update: async (req, res) => {
         try {
             const { id } = req.params;
-            const { recipe_image_link, title, ingredients, how_to_cook, recipe_video_link } = req.body;
-            const data = await RecipesModel.updateRecipe(recipe_image_link, 
+            const { title, ingredients, how_to_cook, recipe_video_link } = req.body;
+            const data = await RecipesModel.updateRecipe( 
                 title, 
                 ingredients, 
                 how_to_cook, 
@@ -190,6 +175,35 @@ const RecipesController = {
             success(res, data, 'success', 'Recipe is updated successfully');
         } catch (err) {
             failed(res, err.message, 'failed', 'Recipe is failed to be updated');
+        }
+    },
+    deactivate: async (req, res) => {
+        try {
+            const { title } = req.params;
+
+            const data = await RecipesModel.deactivateRecipe(title);
+            success(res, data, 'success', 'Recipe is deactivated successfully');
+        } catch (err) {
+            failed(res, err.message, 'failed', 'Recipe is failed to be deactivated');
+        }
+    },
+    reactivate: async (req, res) => {
+        try {
+            const { title } = req.params;
+
+            const data = await RecipesModel.reactivateRecipe(title);
+            success(res, data, 'success', 'Recipe is reactivated successfully');
+        } catch (err) {
+            failed(res, err.message, 'failed', 'Recipe is failed to be reactivated');
+        }
+    },
+    delete: async (req, res) => {
+        try {
+            const { id } = req.params;
+            const data = await RecipesModel.deleteRecipe(id);
+            success(res, data, 'success', 'Recipe is deleted successfully');
+        } catch (err) {
+            failed(res, err.message, 'failed', 'Recipe is failed to be deleted');
         }
     }
 };

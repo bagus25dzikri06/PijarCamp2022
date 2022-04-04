@@ -74,14 +74,13 @@ const RecipesModel = {
               resolve(result);
             });
         })
-    },
-        
-    addRecipe: (user_id, recipe_image_link, title, ingredients, how_to_cook, recipe_video_link) => {
+    }, 
+    addRecipe: (user_id, title, ingredients, how_to_cook, recipe_video_link) => {
       return new Promise((resolve, reject) => {
-            addQuery = 'INSERT INTO recipes (user_id, recipe_image_link, title, ingredients, how_to_cook, recipe_video_link) ' +
-                       'VALUES ($1, $2, $3, $4, $5, $6)'
+            addQuery = 'INSERT INTO recipes (user_id, title, ingredients, how_to_cook, recipe_video_link) ' +
+                       'VALUES ($1, $2, $3, $4, $5)'
     
-            pool.query(addQuery, [user_id, recipe_image_link, title, ingredients, how_to_cook, recipe_video_link],
+            pool.query(addQuery, [user_id, title, ingredients, how_to_cook, recipe_video_link],
             (error, results) => {
               if (error) {
                 reject(error);
@@ -90,12 +89,11 @@ const RecipesModel = {
             });
         })
     },
-    updateRecipe: (recipe_image_link, title, ingredients, how_to_cook, recipe_video_link, id) => {
+    updateRecipe: (title, ingredients, how_to_cook, recipe_video_link, id) => {
       return new Promise((resolve, reject) => {
-            updateQuery = 'UPDATE recipes SET recipe_image_link = $1, title = $2, '
-                          + 'ingredients = $3, how_to_cook = $4, recipe_video_link = $5 WHERE id = $6'
+            updateQuery = 'UPDATE recipes SET title = $1, ingredients = $2, how_to_cook = $3, recipe_video_link = $4 WHERE id = $5'
     
-            pool.query(updateQuery, [recipe_image_link, title, ingredients, how_to_cook, recipe_video_link, id],
+            pool.query(updateQuery, [title, ingredients, how_to_cook, recipe_video_link, id],
             (error, results) => {
                 if (error) {
                   reject(error);
@@ -103,7 +101,37 @@ const RecipesModel = {
                 resolve(`Recipe ${title} updated from user with ID: ${id}`);
             });
       })
-    }
+    },
+    deactivateRecipe: (title) => {
+      return new Promise((resolve, reject) => {
+          pool.query('UPDATE recipes SET is_active = FALSE WHERE title = $1', [title], (error, results) => {
+              if (error) {
+                  reject(error);
+              }
+              resolve(`Recipe is successfully deactivated`);
+          })
+      })
+    },
+    reactivateRecipe: (title) => {
+      return new Promise((resolve, reject) => {
+          pool.query('UPDATE recipes SET is_active = TRUE WHERE title = $1', [title], (error, results) => {
+              if (error) {
+                  reject(error);
+              }
+              resolve(`Recipe is successfully reactivated`);
+          })
+      })
+    },
+    deleteRecipe: (id) => {
+      return new Promise((resolve, reject) => {
+          pool.query('DELETE FROM recipe WHERE id = $1', [id], (error, results) => {
+              if (error) {
+                  reject(error);
+              }
+              resolve(`Recipe is successfully deleted`);
+          })
+      })
+  },
 };
 
 module.exports = {
