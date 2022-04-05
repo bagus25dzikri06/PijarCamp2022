@@ -1,11 +1,18 @@
-var CryptoJS = require("crypto-js");
+const CryptoJS = require("crypto-js");
+const bcrypt = require('bcrypt');
 
 const kriptografi = (kata, callback) => {
     return callback(kata)
 }
 
 const encryption = (word) => {
-    return CryptoJS.AES.encrypt(word, 'secret key 123').toString()
+    //return CryptoJS.AES.encrypt(word, 'secret key 123').toString()
+    return bcrypt.hash(word, 10, (err, hash) => {
+        if (err) {
+            return err.message
+        }
+        return hash
+    })
 }
 
 const decryption = (word) => {
@@ -13,4 +20,4 @@ const decryption = (word) => {
 }
 
 console.log(kriptografi('Welcome', encryption))
-console.log(kriptografi('U2FsdGVkX19EnPQ5nsCIR5d2A2fgPQedj+DfesHGaJ8=', decryption))
+//console.log(kriptografi('U2FsdGVkX19EnPQ5nsCIR5d2A2fgPQedj+DfesHGaJ8=', decryption))

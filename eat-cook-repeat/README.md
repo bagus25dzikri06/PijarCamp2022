@@ -20,6 +20,9 @@ https://www.figma.com/file/SUbBTYCq1e4ngRt20lSdqr/Food-Recipe?node-id=47%3A1273
 10. eslint-config-airbnb-base (15.0.0)
 11. eslint-plugin-import (2.25.4)
 12. prettier (2.6.1)
+13. jsonwebtoken (8.5.1)
+14. bcrypt (5.0.1)
+15. multer (1.4.4)
 
 ### How To Run
 1. Download and install the latest version of [Node](https://nodejs.org/en/)
