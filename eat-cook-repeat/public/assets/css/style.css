@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body {
+    background-color: #FFFFFF;
+    font-family: 'Lato';
+}
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+}
+
+.card-registration .select-arrow {
+    top: 13px;
+}
+
+.g-0 {
+    background-color: #FFFFFF;
+}
+
+.img-fluid {
+    filter: opacity(0.325) drop-shadow(0 0 0 #b0920a);
+    position: relative;
+}
+
+.mama-recipe {
+    position: absolute;
+    top: 380px;
+    right: 880px;
+}
+
+.col-xl-6 > .text-black {
+    text-align: left;
+    margin: 80px 0 80px 0;
+}
+
+h1 {
+    text-align: left;
+    font-size: 400%;
+    margin: 250px 0 250px 0;
+}
+
+h1.recipe-name {
+    text-align: center;
+    font-size: 400%;
+    margin: 50px 0 50px 0;
+}
+
+h4 {
+    text-align: left;
+    font-size: 300%;
+}
+
+h5 {
+    text-align: left;
+    font-size: 200%;
+}
+
+.account, u {
+    color: #EFC81A;
+}
+
+label.new-account {
+    text-align: center;
+}
+
+.next {
+    text-align: left;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+p {
+    font-size: 110%;
+}
+
+.ingredients {
+    margin: 0;
+}
+
+h1, .nav-link {
+    color: #220765 !important;
+}
+
+.btn-lg {
+    color: #FFFFFF;
+}
+
+.card > .card-body > .card-title {
+    text-align: center;
+    font-size: 400%;
+}
+
+.card, .card > .card-body, .card > .card-nav 
+{
+    background-color: #EFC81A !important;
+}
+
+.card > .card-body {
+    padding: 8px;
+    margin: 150px 0 0 0;
+}
+
+.card > .card-nav {
+    padding: 8px;
+    margin: 150px 0 0 0;
+}
+
+.profile {
+    padding: 8px;
+    margin: 150px 0 300px 0;
+    text-align: center;
+}
+
+.recipe-page {
+    margin: 3px 0 100px 0;
+    text-align: center;
+}
+
+.profile-name {
+    font-size: 22px;
+}
+
+.h4:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.form-group {
+    padding: 8px;
+    margin: 25px 25px 25px 0;
+}
+
+.container {
+    position: relative;
+    text-align: right;
+}
+
+.popular {
+    padding: 8px;
+    margin: 25px 25px 25px 0;
+}
+
+.new-recipe {
+    padding: 8px;
+    margin: 25px 25px 85px 0;
+}
+
+.recipe-step {
+    margin: 80px 0;
+}
+
+.form-group {
+    padding: 8px;
+    margin: 25px 25px 25px 0;
+}
+
+.btn-send {
+    text-align: center;
+}
+
+.bottom-left, .bottom-left-popular {
+    position: absolute;
+    bottom: 8px;
+    right: 250px;
+    font-size: 125%;
+}
+
+.box{
+    position: relative;
+    display: inline-block; /* Make the width of box same as image */
+}
+.box .text{
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 50%;        
+    text-align: center;
+    top: 80%; /* Adjust this value to move the positioned div up and down */
+    font-family: 'Lato';
+    color: #fff;
+    width: 60%; /* Set the width of the positioned div */
+}
+
+.fa {
+    font-size: 12px;
+}
+
+p.steps {
+    font-size: 28px;
+}
+
+p.next-steps {
+    font-size: 16px;
+}
+
+p.steps, p.next-steps {
+    color: #000000;
+    font-weight: bold;
+    margin: 0em;
+}
+
+p.steps-timeline {
+    font-size: 16px;
+    color: #AAAAAA;
+    font-weight: bold;
+}
+
+p.next-steps-timeline {
+    font-size: 10px;
+    color: #AAAAAA;
+    font-weight: bold;
+}
+
+p.steps, p.steps-timeline, p.next-steps, p.next-steps-timeline {
+    text-align: left;
+}
+
+/* The navigation menu */
+.recipe-navbar {
+    overflow: hidden;
+    background-color: #FFFFFF;
+}
+  
+/* Navigation links */
+.recipe-navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+/* The subnavigation menu */
+.subnav {
+    float: left;
+    overflow: hidden;
+}
+  
+/* Subnav button */
+.subnav .subnavbtn {
+    font-size: 18px;
+    border: none;
+    outline: none;
+    color: #000000;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.subnav:hover .subnavbtn {
+    font-weight: bold;
+}
+  
+/* Style the subnav content - positioned absolute */
+.subnav-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+  
+/* Style the subnav links */
+.subnav-content a {
+    float: left;
+    color: white;
+    text-decoration: none;
+}
+  
+/* Add a grey background color on hover */
+.subnav-content a:hover {
+    background-color: #eee;
+    color: black;
+}
+  
+/* When you move the mouse over the subnav container, open the subnav content */
+.subnav:hover .subnav-content {
+    display: block;
+}
+
+.box-shadow
+{
+	-webkit-box-shadow: 0 1px 1px rgba(72,78,85,.6);
+	box-shadow: 0 1px 1px rgba(72,78,85,.6);
+	-webkit-transition: all .2s ease-out;
+	-moz-transition: all .2s ease-out;
+	-ms-transition: all .2s ease-out;
+	-o-transition: all .2s ease-out;
+	transition: all .2s ease-out;
+}
+
+.box-shadow:hover
+{
+	-webkit-box-shadow: 0 20px 40px rgba(72,78,85,.6);
+	box-shadow: 0 20px 40px rgba(72,78,85,.6);
+	-webkit-transform: translateY(-15px);
+	-moz-transform: translateY(-15px);
+	-ms-transform: translateY(-15px);
+	-o-transform: translateY(-15px);
+	transform: translateY(-15px);
+}
+
+.new-recipe-bg {
+    text-align: left;
+    left: 130px;
+}
+
+.has-recipe-search .form-control {
+    padding-left: 2.375rem;
+    top: 150px;
+}
+
+.has-recipe-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.jumbotron {
+    position: absolute;
+    top: -10px;
+    right: -110px;
+}
+
+.recipe-step-jumbotron {
+    position: absolute;
+    top: -100px;
+    left: -110px;
+}
+
+.lettuce {
+    position: absolute;
+    top: 20px;
+    right: 80px;
+    -moz-border-radius:185x;
+    -webkit-border-radius:185px;
+    border-radius:185px;
+}
+
+.food-recipe {
+    position: absolute;
+    top: 150px;
+    right: 50px;
+    -moz-border-radius:285x;
+    -webkit-border-radius:285px;
+    border-radius:285px;
+}
+
+.new-food-recipe {
+    position: absolute;
+    bottom: 1000px;
+    left: 55px;
+    -moz-border-radius:35px;
+    -webkit-border-radius:35px;
+    border-radius:35px;
+}
+
+.login {
+    color: #0f8a0fcd  !important;
+}
+
+.bottom-left {
+    color: #fff !important;
+}
+
+.file-upload {
+    background-color: #ffffff;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+.file-upload-btn {
+    width: 100%;
+    margin: 0;
+    color: #fff;
+    background: #EFC81A;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    border-bottom: 4px solid #EFC81A;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+  
+.file-upload-btn:hover {
+    background: #EFC81A;
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+  
+.file-upload-btn:active {
+    border: 0;
+    transition: all .2s ease;
+}
+  
+.file-upload-content {
+    display: none;
+    text-align: center;
+}
+  
+.file-upload-input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+}
+  
+.image-upload-wrap {
+    margin-top: 20px;
+    border: 4px dashed #EFC81A;
+    position: relative;
+}
+  
+.image-dropping, .image-upload-wrap:hover {
+    background-color: #EFC81A;
+    border: 4px dashed #ffffff;
+}
+  
+.image-title-wrap {
+    padding: 0 15px 15px 15px;
+    color: #222;
+}
+  
+.drag-text {
+    text-align: center;
+}
+
+.drag-text img {
+    padding: 60px 0;
+}
+
+.drag-text img:hover {
+    color: #FFFFFF;
+}
+  
+.file-upload-image {
+    max-height: 200px;
+    max-width: 200px;
+    margin: auto;
+    padding: 20px;
+}
+  
+.remove-image {
+    width: 200px;
+    margin: 0;
+    color: #fff;
+    background: #cd4535;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    border-bottom: 4px solid #b02818;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+  
+.remove-image:hover {
+    background: #c13b2a;
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+  
+.remove-image:active {
+    border: 0;
+    transition: all .2s ease;
+}
