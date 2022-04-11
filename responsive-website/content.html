@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header, Sidebar, Content, Footer</title>
+</head>
+<style>
+    .parent {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .main {
+        display: flex;
+        flex-grow: 1;
+    }
+
+    .content {
+        flex-grow: 1;
+    }
+    
+    /* --------- Non-flexbox related styles --------- */
+    .child, .navigation, .header, .footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1%;
+        padding: 20px;
+        font-size: 20px;
+        line-height: 20px;
+        color: #ffe8c3;
+        border-radius: 10px;
+        border: 10px solid #f5cc8b;
+    }
+
+    .child {
+        background-color: #69d31e;
+    }
+
+    .navigation {
+        background-color: #ac9df0;
+    }
+
+    .header {
+        background-color: #5a1010;
+    }
+
+    .footer {
+        background-color: #db13ce;
+    }
+
+    body {
+        background-color: #282c35;
+        font-family: Verdana;
+        font-weight: 600;
+    }
+
+    @media screen and (max-width: 600px) {
+        body {
+            background-color: #dd1021;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        .header {
+            background-color: #336d09;
+        }
+    }
+</style>
+<body>
+    <div class="parent">
+        <div class="header">Header</div>
+        <div class="navigation">Navigation Menu</div>
+        <div class="main">
+            <div class="child">Sidebar</div>
+            <div class="child content">Content</div>  
+        </div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

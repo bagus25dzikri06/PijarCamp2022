@@ -1,0 +1,36 @@
+h1 {
+    color: #55ab5f82;
+    font-size: 300%;
+}
+
+h6 {
+    font-size: 150%;
+}
+
+ul {
+    padding-left: 0;
+    list-style-position: inside;
+    font-size: 120%;
+}
+
+.name {
+    padding: 5px 30px 5px 30px;
+    margin: 225px 330px 225px 330px;
+    text-align: center;
+    background-color: #f6ee0bde;
+}
+
+.job-desc {
+    font-size: 70%;
+}
+
+p {
+    color: #2f95ae;
+}
+
+body {
+    background-image: url(../images/02-3x4.jpg);
+    background-repeat: no-repeat;
+    background-size: 500px;
+    background-position: center;
+}

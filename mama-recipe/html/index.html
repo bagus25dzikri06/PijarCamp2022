@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <title>Eat, Cook, Repeat</title>
+  </head>
+  <style>
+    .popular > .card {
+        width: 18rem;
+    }
+
+    @media screen and (max-width: 600px) {
+        body {
+            background-color: #fff5ec;
+        }
+    }
+  </style>
+  <body>
+    <div class="navigation">
+        <nav class="navbar fixed-top navbar-expand-lg py-4 navbar-light shadow-5-strong">
+            <div class="container-fluid">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="add-recipe.html">Add Recipe</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="profile.html">Profile</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <img 
+                    class="me-2"
+                    src="../assets/images/PinClipart.com_birthday-clipart-for-facebook_1814767.png" 
+                    alt="Login_Icon"
+                    width="50px"
+                    height="45px"
+                  />
+                  <a class="nav-link login" href="login.html">Login</a>
+                </form>
+              </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1>
+              Discover Recipe & Delicious Food 
+              <div class="form-group has-recipe-search">
+                <i class="fa fa-search form-control-feedback"></i>
+                <input type="text" class="form-control" placeholder="Recipe Search">
+              </div>
+            </h1>
+          </div>
+          <div class="col-md-6">
+            <img class="jumbotron" src="../assets/images/Rectangle_2_(1).jpg" alt="background"
+            width="420"
+            height="760"/>
+            <img class="lettuce" 
+            src="../assets/images/—Pngtree—lettuce_1175257_1.svg" alt="lettuce-wp" 
+            width="484px"
+            height="726px"/>
+            <img class="food-recipe" 
+            src="../assets/images/—Pngtree—delicious food_568171_1.svg" alt="food-wp" 
+            width="578px"
+            height="570px" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h5>
+              <img src="../assets/images/Rectangle8.jpg" height="105px" alt="icon">
+              Popular For You!
+            </h5>
+          </div>
+        </div>
+        <div class="row popular">
+          <div class="col-md-4">
+            <div class="card box-shadow">
+              <a href="recipe-page.html">
+                <img src="../assets/images/Rectangle7.jpg" class="card-img-top" alt="...">
+              </a>
+              <div class="bottom-left">Pizza Lamoa</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card box-shadow">
+              <a href="recipe-page.html">
+                <img src="../assets/images/Rectangle_7_(1).jpg" class="card-img-top" alt="...">
+              </a>
+              <div class="bottom-left">King Burger</div>
+            </div>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h5>
+              <img src="../assets/images/Rectangle8.jpg" height="105px" alt="icon">
+              New Recipe
+            </h5>
+          </div>
+        </div>
+        <div class="row new-recipe">
+          <div class="col-md-6 new-recipe-bg">
+            <img src="../assets/images/Rectangle_2.jpg" alt="new-recipe-bg" width="214" height="320">
+            <img class="new-food-recipe" src="../assets/images/Rectangle_313.jpg" alt="new-food-wp" width="380" height="380"/>
+          </div>
+          <div class="col-md-6">
+            <h4>Healthy Bone Broth Ramen (Quick & Easy)</h4>
+            <hr width="17%" />
+            <p class="text-start">Quick + Easy Chicken Bone Broth Ramen- Healthy chicken ramen in a hurry? That’s right!</p>
+            <a type="button" class="btn btn-warning d-md-block col-5" href="recipe-page.html">Learn More</a>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-between">
+          <div class="col-md-12">
+            <h5>
+              <img src="../assets/images/Rectangle8.jpg" height="105px" alt="icon">
+              Popular Recipe
+            </h5>
+          </div>
+        </div>
+        <div class="row popular">
+          <div class="col-md-4">
+            <div class="card box-shadow">
+              <a href="recipe-page.html">
+                <img src="../assets/images/Rectangle314.jpg" class="card-img-top" alt="...">
+              </a>
+              <div class="bottom-left-popular text-center">Chicken Curry</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card box-shadow">
+              <a href="recipe-page.html">
+                <img src="../assets/images/Rectangle315.jpg" class="card-img-top" alt="...">
+              </a>
+              <div class="bottom-left-popular text-center">Chicken Bomb</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card box-shadow">
+              <a href="recipe-page.html">
+                <img src="../assets/images/Rectangle316.jpg" class="card-img-top" alt="...">
+              </a>
+              <div class="bottom-left-popular text-center">Banana Smoothie Pop</div>
+            </div>
+          </div>
+        </div>
+        <div class="row popular">
+          <div class="col-md-4">
+            <div class="card box-shadow">
+              <a href="recipe-page.html">
+                <img src="../assets/images/Rectangle317.jpg" class="card-img-top" alt="...">
+              </a>
+              <div class="bottom-left-popular text-center">Coffee Lava Cake</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card box-shadow">
+              <a href="recipe-page.html">
+                <img src="../assets/images/Rectangle318.jpg" class="card-img-top" alt="...">
+              </a>
+              <div class="bottom-left-popular text-center">Sugar Salmon</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card box-shadow">
+              <a href="recipe-page.html">
+                <img src="../assets/images/Rectangle319.jpg" class="card-img-top" alt="...">
+              </a>
+              <div class="bottom-left-popular">Indian Salad</div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="footer">
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title">Eat, Cook, Repeat</h5>
+          <p class="card-text">Share Your Best Recipe By Uploading Here!</p>
+        </div>
+        <div class="card-nav">
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+              <ul class="nav justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Product</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Company</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Learn More</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Get In Touch</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <b>&copy; PijarCamp</b>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+        crossorigin="anonymous">
+    </script>
+  </body>
+</html>
